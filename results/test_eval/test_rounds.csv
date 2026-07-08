@@ -1,0 +1,2 @@
+round,phase,accuracy,f1_macro,f1_Class_0,f1_Class_1,f1_Class_2,f1_Class_3,f1_Class_4,f1_Class_5,f1_Class_6,f1_Class_7,f1_Class_8,f1_Class_9,f1_Class_10,f1_Class_11
+0,warmup,0.087500,0.017311,0.000000,0.164251,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.043478

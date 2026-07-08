@@ -1,0 +1,25 @@
+# Virtual environments
+myenv/
+venv/
+env/
+.env/
+
+# Raw datasets (too large for GitHub)
+datasets/
+normalized_dataset_cicandmal2017/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

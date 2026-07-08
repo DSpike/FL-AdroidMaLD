@@ -1,0 +1,659 @@
+
+============================================================
+ FL-AdroidMaLD  Phase 1
+ Device   : cpu
+ Rounds   : 30  (warmup=15)
+ Clients  : 10
+ Dist     : Dir_0.5
+============================================================
+
+[1/4] Loading dataset ...
+Loaded: 2616579 samples, 73 features, 5 classes
+Class distribution:
+  Adware              : 424147
+  Benign              : 1205515
+  Ransomware          : 348943
+  SMS_Malware         : 237133
+  Scareware           : 400841
+
+Global holdout split:
+  Train : 2093263 samples (80%)
+  Test  : 523316 samples (20%) — LOCKED
+      Train=2093263  Test=523316  Features=73  Classes=5
+
+[2/4] Distributing data (Dir_0.5) ...
+
+Generating all distributions...
+Done. Distributions generated: ['IID', 'Dir_1.0', 'Dir_0.5', 'Dir_0.1', 'Pathological']
+      Client  1: 92563 samples
+      Client  2: 261883 samples
+      Client  3: 126876 samples
+      Client  4: 277485 samples
+      Client  5: 39704 samples
+      Client  6: 198750 samples
+      Client  7: 365556 samples
+      Client  8: 112847 samples
+      Client  9: 54165 samples
+      Client 10: 563434 samples
+
+[3/4] Initialising FL components ...
+
+[4/4] Starting FL training ...
+
+────────────────────────────────────────────────────────────
+ Round   1/30  [WARMUP]
+   Client  1: val_f1=19.6%  val_acc=46.9%
+   Client  2: val_f1=12.8%  val_acc=19.9%
+   Client  3: val_f1=8.6%  val_acc=11.3%
+   Client  4: val_f1=18.4%  val_acc=36.7%
+   Client  5: val_f1=11.6%  val_acc=19.9%
+   Client  6: val_f1=17.1%  val_acc=25.8%
+   Client  7: val_f1=18.1%  val_acc=56.5%
+   Client  8: val_f1=11.6%  val_acc=24.8%
+   Client  9: val_f1=4.4%  val_acc=12.2%
+   Client 10: val_f1=18.3%  val_acc=58.7%
+
+[Round   1 |   warmup] Acc=44.13%  F1-macro=14.22%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=62.1%  P=46.3%  R=94.3%
+    Ransomware          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    SMS_Malware         : F1=9.0%  P=11.1%  R=7.6% <-- minority
+    Scareware           : F1=0.0%  P=0.0%  R=0.0% <-- minority
+ Round time: 1380.0s
+────────────────────────────────────────────────────────────
+ Round   2/30  [WARMUP]
+   Client  1: val_f1=14.6%  val_acc=18.9%
+   Client  2: val_f1=15.6%  val_acc=23.3%
+   Client  3: val_f1=4.6%  val_acc=6.2%
+   Client  4: val_f1=17.8%  val_acc=34.6%
+   Client  5: val_f1=6.8%  val_acc=20.4%
+   Client  6: val_f1=14.8%  val_acc=21.5%
+   Client  7: val_f1=18.2%  val_acc=57.1%
+   Client  8: val_f1=9.7%  val_acc=17.6%
+   Client  9: val_f1=5.8%  val_acc=17.1%
+   Client 10: val_f1=18.7%  val_acc=61.6%
+
+[Round   2 |   warmup] Acc=45.80%  F1-macro=13.27%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=63.0%  P=46.2%  R=99.0%
+    Ransomware          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    SMS_Malware         : F1=3.4%  P=14.5%  R=1.9% <-- minority
+    Scareware           : F1=0.0%  P=0.0%  R=0.0% <-- minority
+ Round time: 1361.5s
+────────────────────────────────────────────────────────────
+ Round   3/30  [WARMUP]
+   Client  1: val_f1=15.4%  val_acc=19.8%
+   Client  2: val_f1=15.8%  val_acc=20.8%
+   Client  3: val_f1=7.4%  val_acc=14.1%
+   Client  4: val_f1=21.2%  val_acc=41.0%
+   Client  5: val_f1=15.3%  val_acc=33.7%
+   Client  6: val_f1=13.6%  val_acc=16.3%
+   Client  7: val_f1=20.7%  val_acc=70.8%
+   Client  8: val_f1=11.0%  val_acc=22.7%
+   Client  9: val_f1=6.4%  val_acc=10.1%
+   Client 10: val_f1=20.5%  val_acc=79.7%
+
+[Round   3 |   warmup] Acc=45.28%  F1-macro=14.22%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=62.8%  P=46.4%  R=97.2%
+    Ransomware          : F1=2.7%  P=20.2%  R=1.5% <-- minority
+    SMS_Malware         : F1=5.6%  P=13.1%  R=3.6% <-- minority
+    Scareware           : F1=0.0%  P=0.0%  R=0.0% <-- minority
+ Round time: 1544.0s
+────────────────────────────────────────────────────────────
+ Round   4/30  [WARMUP]
+   Client  1: val_f1=12.4%  val_acc=15.3%
+   Client  2: val_f1=15.0%  val_acc=22.7%
+   Client  3: val_f1=12.3%  val_acc=24.8%
+   Client  4: val_f1=18.6%  val_acc=31.7%
+   Client  5: val_f1=15.9%  val_acc=24.8%
+   Client  6: val_f1=12.1%  val_acc=13.4%
+   Client  7: val_f1=20.7%  val_acc=76.1%
+   Client  8: val_f1=20.8%  val_acc=51.7%
+   Client  9: val_f1=3.8%  val_acc=6.6%
+   Client 10: val_f1=18.6%  val_acc=61.0%
+
+[Round   4 |   warmup] Acc=43.04%  F1-macro=15.74%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=61.5%  P=46.6%  R=90.3%
+    Ransomware          : F1=7.3%  P=18.7%  R=4.5% <-- minority
+    SMS_Malware         : F1=9.9%  P=11.0%  R=9.1% <-- minority
+    Scareware           : F1=0.0%  P=0.0%  R=0.0% <-- minority
+ Round time: 1554.9s
+────────────────────────────────────────────────────────────
+ Round   5/30  [WARMUP]
+   Client  1: val_f1=19.1%  val_acc=27.6%
+   Client  2: val_f1=12.8%  val_acc=14.8%
+   Client  3: val_f1=18.0%  val_acc=34.3%
+   Client  4: val_f1=20.9%  val_acc=40.8%
+   Client  5: val_f1=14.8%  val_acc=20.6%
+   Client  6: val_f1=19.1%  val_acc=26.1%
+   Client  7: val_f1=20.1%  val_acc=63.5%
+   Client  8: val_f1=16.7%  val_acc=28.8%
+   Client  9: val_f1=14.0%  val_acc=20.0%
+   Client 10: val_f1=20.5%  val_acc=74.1%
+
+[Round   5 |   warmup] Acc=40.38%  F1-macro=18.38%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=59.8%  P=47.6%  R=80.5%
+    Ransomware          : F1=14.3%  P=16.6%  R=12.5% <-- minority
+    SMS_Malware         : F1=9.2%  P=11.2%  R=7.8% <-- minority
+    Scareware           : F1=8.6%  P=15.8%  R=5.9% <-- minority
+ Round time: 1554.6s
+────────────────────────────────────────────────────────────
+ Round   6/30  [WARMUP]
+   Client  1: val_f1=15.7%  val_acc=19.2%
+   Client  2: val_f1=18.5%  val_acc=31.5%
+   Client  3: val_f1=16.5%  val_acc=27.8%
+   Client  4: val_f1=21.8%  val_acc=41.6%
+   Client  5: val_f1=17.0%  val_acc=22.3%
+   Client  6: val_f1=13.5%  val_acc=15.4%
+   Client  7: val_f1=12.4%  val_acc=27.8%
+   Client  8: val_f1=14.2%  val_acc=19.9%
+   Client  9: val_f1=15.4%  val_acc=26.4%
+   Client 10: val_f1=20.3%  val_acc=71.0%
+
+[Round   6 |   warmup] Acc=39.59%  F1-macro=19.28%
+    Adware              : F1=0.8%  P=98.6%  R=0.4% <-- minority
+    Benign              : F1=59.2%  P=48.0%  R=77.1%
+    Ransomware          : F1=15.2%  P=16.8%  R=13.8% <-- minority
+    SMS_Malware         : F1=9.5%  P=11.5%  R=8.1% <-- minority
+    Scareware           : F1=11.8%  P=16.4%  R=9.2% <-- minority
+ Round time: 1548.4s
+────────────────────────────────────────────────────────────
+ Round   7/30  [WARMUP]
+   Client  1: val_f1=16.8%  val_acc=19.3%
+   Client  2: val_f1=14.9%  val_acc=19.5%
+   Client  3: val_f1=16.1%  val_acc=27.6%
+   Client  4: val_f1=22.5%  val_acc=41.8%
+   Client  5: val_f1=19.9%  val_acc=28.2%
+   Client  6: val_f1=16.7%  val_acc=21.0%
+   Client  7: val_f1=15.8%  val_acc=39.8%
+   Client  8: val_f1=14.3%  val_acc=26.8%
+   Client  9: val_f1=14.2%  val_acc=21.6%
+   Client 10: val_f1=19.8%  val_acc=67.8%
+
+[Round   7 |   warmup] Acc=40.10%  F1-macro=19.28%
+    Adware              : F1=1.3%  P=96.7%  R=0.7% <-- minority
+    Benign              : F1=59.5%  P=47.9%  R=78.6%
+    Ransomware          : F1=14.5%  P=17.1%  R=12.6% <-- minority
+    SMS_Malware         : F1=9.1%  P=11.2%  R=7.7% <-- minority
+    Scareware           : F1=11.9%  P=17.1%  R=9.2% <-- minority
+ Round time: 1552.6s
+────────────────────────────────────────────────────────────
+ Round   8/30  [WARMUP]
+   Client  1: val_f1=15.0%  val_acc=16.9%
+   Client  2: val_f1=13.3%  val_acc=17.3%
+   Client  3: val_f1=16.2%  val_acc=25.5%
+   Client  4: val_f1=21.9%  val_acc=40.2%
+   Client  5: val_f1=18.1%  val_acc=27.0%
+   Client  6: val_f1=15.0%  val_acc=17.5%
+   Client  7: val_f1=15.0%  val_acc=35.8%
+   Client  8: val_f1=14.3%  val_acc=19.7%
+   Client  9: val_f1=16.5%  val_acc=26.1%
+   Client 10: val_f1=20.5%  val_acc=71.2%
+
+[Round   8 |   warmup] Acc=40.06%  F1-macro=19.04%
+    Adware              : F1=0.0%  P=94.1%  R=0.0% <-- minority
+    Benign              : F1=59.6%  P=47.9%  R=78.8%
+    Ransomware          : F1=16.0%  P=17.9%  R=14.4% <-- minority
+    SMS_Malware         : F1=12.1%  P=12.1%  R=12.2% <-- minority
+    Scareware           : F1=7.5%  P=16.8%  R=4.8% <-- minority
+ Round time: 1558.7s
+────────────────────────────────────────────────────────────
+ Round   9/30  [WARMUP]
+   Client  1: val_f1=18.9%  val_acc=23.2%
+   Client  2: val_f1=16.9%  val_acc=23.7%
+   Client  3: val_f1=19.5%  val_acc=32.1%
+   Client  4: val_f1=21.9%  val_acc=37.7%
+   Client  5: val_f1=20.6%  val_acc=26.1%
+   Client  6: val_f1=12.9%  val_acc=13.6%
+   Client  7: val_f1=19.6%  val_acc=60.9%
+   Client  8: val_f1=13.2%  val_acc=16.8%
+   Client  9: val_f1=16.8%  val_acc=25.3%
+   Client 10: val_f1=20.4%  val_acc=70.0%
+
+[Round   9 |   warmup] Acc=38.59%  F1-macro=20.02%
+    Adware              : F1=1.4%  P=96.3%  R=0.7% <-- minority
+    Benign              : F1=58.2%  P=48.4%  R=73.0%
+    Ransomware          : F1=18.7%  P=16.9%  R=21.0% <-- minority
+    SMS_Malware         : F1=12.4%  P=13.4%  R=11.6% <-- minority
+    Scareware           : F1=9.3%  P=16.7%  R=6.5% <-- minority
+ Round time: 1550.9s
+────────────────────────────────────────────────────────────
+ Round  10/30  [WARMUP]
+   Client  1: val_f1=18.5%  val_acc=22.5%
+   Client  2: val_f1=15.9%  val_acc=20.8%
+   Client  3: val_f1=16.6%  val_acc=27.0%
+   Client  4: val_f1=22.3%  val_acc=38.5%
+   Client  5: val_f1=20.5%  val_acc=27.9%
+   Client  6: val_f1=18.4%  val_acc=21.3%
+   Client  7: val_f1=21.0%  val_acc=67.0%
+   Client  8: val_f1=13.8%  val_acc=20.9%
+   Client  9: val_f1=13.5%  val_acc=19.1%
+   Client 10: val_f1=18.5%  val_acc=62.3%
+
+[Round  10 |   warmup] Acc=30.11%  F1-macro=20.62%
+    Adware              : F1=10.1%  P=57.1%  R=5.5% <-- minority
+    Benign              : F1=47.0%  P=50.5%  R=43.9%
+    Ransomware          : F1=23.7%  P=15.4%  R=51.5% <-- minority
+    SMS_Malware         : F1=13.2%  P=13.2%  R=13.1% <-- minority
+    Scareware           : F1=9.2%  P=19.3%  R=6.0% <-- minority
+ Round time: 1560.7s
+────────────────────────────────────────────────────────────
+ Round  11/30  [WARMUP]
+   Client  1: val_f1=18.8%  val_acc=22.7%
+   Client  2: val_f1=15.1%  val_acc=19.9%
+   Client  3: val_f1=17.5%  val_acc=28.1%
+   Client  4: val_f1=22.9%  val_acc=40.3%
+   Client  5: val_f1=21.2%  val_acc=27.1%
+   Client  6: val_f1=17.8%  val_acc=20.5%
+   Client  7: val_f1=17.8%  val_acc=47.5%
+   Client  8: val_f1=16.0%  val_acc=23.1%
+   Client  9: val_f1=14.8%  val_acc=22.3%
+   Client 10: val_f1=20.2%  val_acc=69.5%
+
+[Round  11 |   warmup] Acc=38.32%  F1-macro=22.00%
+    Adware              : F1=10.4%  P=63.1%  R=5.7% <-- minority
+    Benign              : F1=57.2%  P=49.1%  R=68.6%
+    Ransomware          : F1=21.8%  P=17.0%  R=30.3% <-- minority
+    SMS_Malware         : F1=10.8%  P=15.7%  R=8.2% <-- minority
+    Scareware           : F1=9.9%  P=18.3%  R=6.8% <-- minority
+ Round time: 1559.5s
+────────────────────────────────────────────────────────────
+ Round  12/30  [WARMUP]
+   Client  1: val_f1=18.5%  val_acc=23.7%
+   Client  2: val_f1=17.9%  val_acc=25.7%
+   Client  3: val_f1=20.7%  val_acc=37.2%
+   Client  4: val_f1=22.7%  val_acc=36.5%
+   Client  5: val_f1=19.7%  val_acc=26.0%
+   Client  6: val_f1=15.4%  val_acc=15.8%
+   Client  7: val_f1=17.4%  val_acc=41.2%
+   Client  8: val_f1=15.1%  val_acc=20.1%
+   Client  9: val_f1=15.7%  val_acc=23.4%
+   Client 10: val_f1=14.8%  val_acc=40.1%
+
+[Round  12 |   warmup] Acc=32.26%  F1-macro=21.27%
+    Adware              : F1=10.1%  P=58.7%  R=5.5% <-- minority
+    Benign              : F1=50.0%  P=50.2%  R=49.9%
+    Ransomware          : F1=23.4%  P=15.5%  R=47.7% <-- minority
+    SMS_Malware         : F1=12.2%  P=15.6%  R=10.0% <-- minority
+    Scareware           : F1=10.7%  P=19.1%  R=7.4% <-- minority
+ Round time: 1559.6s
+────────────────────────────────────────────────────────────
+ Round  13/30  [WARMUP]
+   Client  1: val_f1=19.2%  val_acc=23.3%
+   Client  2: val_f1=19.0%  val_acc=27.1%
+   Client  3: val_f1=18.6%  val_acc=31.0%
+   Client  4: val_f1=23.0%  val_acc=39.4%
+   Client  5: val_f1=22.4%  val_acc=30.6%
+   Client  6: val_f1=17.5%  val_acc=20.2%
+   Client  7: val_f1=19.1%  val_acc=52.1%
+   Client  8: val_f1=15.6%  val_acc=20.7%
+   Client  9: val_f1=16.2%  val_acc=22.3%
+   Client 10: val_f1=19.1%  val_acc=61.5%
+
+[Round  13 |   warmup] Acc=33.11%  F1-macro=21.23%
+    Adware              : F1=8.0%  P=71.2%  R=4.2% <-- minority
+    Benign              : F1=51.3%  P=49.9%  R=52.8%
+    Ransomware          : F1=23.4%  P=15.8%  R=44.8% <-- minority
+    SMS_Malware         : F1=13.4%  P=15.2%  R=12.0% <-- minority
+    Scareware           : F1=10.0%  P=19.1%  R=6.8% <-- minority
+ Round time: 1553.3s
+────────────────────────────────────────────────────────────
+ Round  14/30  [WARMUP]
+   Client  1: val_f1=18.9%  val_acc=24.4%
+   Client  2: val_f1=16.4%  val_acc=22.0%
+   Client  3: val_f1=17.0%  val_acc=28.2%
+   Client  4: val_f1=23.1%  val_acc=38.8%
+   Client  5: val_f1=22.6%  val_acc=30.6%
+   Client  6: val_f1=17.8%  val_acc=20.8%
+   Client  7: val_f1=18.2%  val_acc=48.4%
+   Client  8: val_f1=15.0%  val_acc=19.7%
+   Client  9: val_f1=15.6%  val_acc=22.5%
+   Client 10: val_f1=20.3%  val_acc=67.2%
+
+[Round  14 |   warmup] Acc=40.17%  F1-macro=23.77%
+    Adware              : F1=14.6%  P=57.5%  R=8.4% <-- minority
+    Benign              : F1=58.6%  P=49.0%  R=72.9%
+    Ransomware          : F1=18.6%  P=18.6%  R=18.6% <-- minority
+    SMS_Malware         : F1=12.9%  P=15.3%  R=11.2% <-- minority
+    Scareware           : F1=14.1%  P=18.9%  R=11.2% <-- minority
+ Round time: 1555.2s
+────────────────────────────────────────────────────────────
+ Round  15/30  [WARMUP]
+   Client  1: val_f1=17.7%  val_acc=20.7%
+   Client  2: val_f1=15.0%  val_acc=19.9%
+   Client  3: val_f1=18.6%  val_acc=29.2%
+   Client  4: val_f1=21.8%  val_acc=34.8%
+   Client  5: val_f1=23.1%  val_acc=30.0%
+   Client  6: val_f1=18.4%  val_acc=20.9%
+   Client  7: val_f1=17.5%  val_acc=43.4%
+   Client  8: val_f1=15.3%  val_acc=20.4%
+   Client  9: val_f1=17.2%  val_acc=25.9%
+   Client 10: val_f1=21.3%  val_acc=76.2%
+
+   [Transition] Running GA+PSO feature selection per client ...
+   Client 1: running GA+PSO feature selection ...
+      [GA+PSO] GA: 28 feats (fit=0.2126) → PSO: 30 feats (fit=0.2128)  [58.8s]
+   Client 1: 30/73 features selected (41.1%)
+   Client 2: running GA+PSO feature selection ...
+      [GA+PSO] GA: 33 feats (fit=0.2341) → PSO: 32 feats (fit=0.2358)  [142.0s]
+   Client 2: 32/73 features selected (43.8%)
+   Client 3: running GA+PSO feature selection ...
+      [GA+PSO] GA: 25 feats (fit=0.2290) → PSO: 39 feats (fit=0.2300)  [75.1s]
+   Client 3: 39/73 features selected (53.4%)
+   Client 4: running GA+PSO feature selection ...
+      [GA+PSO] GA: 28 feats (fit=0.2360) → PSO: 32 feats (fit=0.2364)  [153.5s]
+   Client 4: 32/73 features selected (43.8%)
+   Client 5: running GA+PSO feature selection ...
+      [GA+PSO] GA: 35 feats (fit=0.2563) → PSO: 33 feats (fit=0.2548)  [37.4s]
+   Client 5: 33/73 features selected (45.2%)
+   Client 6: running GA+PSO feature selection ...
+      [GA+PSO] GA: 28 feats (fit=0.2187) → PSO: 29 feats (fit=0.2231)  [113.8s]
+   Client 6: 29/73 features selected (39.7%)
+   Client 7: running GA+PSO feature selection ...
+      [GA+PSO] GA: 32 feats (fit=0.2086) → PSO: 39 feats (fit=0.2076)  [203.3s]
+   Client 7: 39/73 features selected (53.4%)
+   Client 8: running GA+PSO feature selection ...
+      [GA+PSO] GA: 32 feats (fit=0.2146) → PSO: 31 feats (fit=0.2125)  [70.7s]
+   Client 8: 31/73 features selected (42.5%)
+   Client 9: running GA+PSO feature selection ...
+      [GA+PSO] GA: 25 feats (fit=0.2081) → PSO: 33 feats (fit=0.2074)  [41.3s]
+   Client 9: 33/73 features selected (45.2%)
+   Client 10: running GA+PSO feature selection ...
+      [GA+PSO] GA: 31 feats (fit=0.2090) → PSO: 36 feats (fit=0.2092)  [325.2s]
+   Client 10: 36/73 features selected (49.3%)
+XGBoost importance plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017\cicandmal2017_dir05_xgb_importance.png
+GA+PSO heatmap saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017\cicandmal2017_dir05_gapso_heatmap.png
+
+   [Feature Analysis] Per-client feature counts:
+      Client  1:  30/73 features selected  (fitness=0.2128)
+      Client  2:  32/73 features selected  (fitness=0.2358)
+      Client  3:  39/73 features selected  (fitness=0.2300)
+      Client  4:  32/73 features selected  (fitness=0.2364)
+      Client  5:  33/73 features selected  (fitness=0.2548)
+      Client  6:  29/73 features selected  (fitness=0.2231)
+      Client  7:  39/73 features selected  (fitness=0.2076)
+      Client  8:  31/73 features selected  (fitness=0.2125)
+      Client  9:  33/73 features selected  (fitness=0.2074)
+      Client 10:  36/73 features selected  (fitness=0.2092)
+   Consensus: 45.8% of features selected on average per client
+
+   [Transition] Building FedEL ensemble ...
+
+[Server] FedEL ensemble built with 10 heads.
+         meta_FC input dim: 50
+
+[Round  15 |   warmup] Acc=10.79%  F1-macro=7.14%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Ransomware          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    SMS_Malware         : F1=16.4%  P=9.2%  R=75.8% <-- minority
+    Scareware           : F1=19.3%  P=15.5%  R=25.6% <-- minority
+ Round time: 2786.5s
+   [AOA] Scores  : [0.1   0.165 0.113 0.171 0.08  0.141 0.204 0.108 0.086 0.28 ]
+   [AOA] Selected: clients [2, 4, 6, 7, 10]
+────────────────────────────────────────────────────────────
+ Round  16/30  [ENSEMBLE]
+   Client  2: val_f1=18.7%  val_acc=24.8%
+   Client  4: val_f1=24.1%  val_acc=42.2%
+   Client  6: val_f1=17.6%  val_acc=20.3%
+   Client  7: val_f1=15.3%  val_acc=33.7%
+   Client 10: val_f1=20.4%  val_acc=66.8%
+
+[Round  16 | ensemble] Acc=38.10%  F1-macro=24.20%
+    Adware              : F1=15.3%  P=64.3%  R=8.7% <-- minority
+    Benign              : F1=56.5%  P=49.7%  R=65.3%
+    Ransomware          : F1=22.4%  P=18.2%  R=29.0% <-- minority
+    SMS_Malware         : F1=13.0%  P=14.9%  R=11.4% <-- minority
+    Scareware           : F1=13.9%  P=18.6%  R=11.1% <-- minority
+ Round time: 462.7s
+   [AOA] Scores  : [0.327 0.383 0.327 0.258 0.327 0.48  0.171 0.327 0.327 0.342]
+   [AOA] Selected: clients [1, 2, 6, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  17/30  [ENSEMBLE]
+   Client  1: val_f1=18.1%  val_acc=22.6%
+   Client  2: val_f1=14.5%  val_acc=18.0%
+   Client  6: val_f1=14.3%  val_acc=14.5%
+   Client  9: val_f1=16.7%  val_acc=24.0%
+   Client 10: val_f1=21.0%  val_acc=70.7%
+
+[Round  17 | ensemble] Acc=39.71%  F1-macro=23.72%
+    Adware              : F1=15.7%  P=62.5%  R=9.0% <-- minority
+    Benign              : F1=58.4%  P=49.2%  R=71.7%
+    Ransomware          : F1=19.6%  P=19.4%  R=19.7% <-- minority
+    SMS_Malware         : F1=14.4%  P=13.2%  R=16.0% <-- minority
+    Scareware           : F1=10.6%  P=19.0%  R=7.4% <-- minority
+ Round time: 351.3s
+   [AOA] Scores  : [0.495 0.264 0.345 0.345 0.345 0.293 0.345 0.345 0.392 0.28 ]
+   [AOA] Selected: clients [1, 3, 5, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  18/30  [ENSEMBLE]
+   Client  1: val_f1=16.0%  val_acc=19.4%
+   Client  3: val_f1=16.8%  val_acc=27.1%
+   Client  5: val_f1=22.3%  val_acc=29.9%
+   Client  8: val_f1=15.2%  val_acc=19.7%
+   Client  9: val_f1=17.9%  val_acc=28.6%
+
+[Round  18 | ensemble] Acc=22.34%  F1-macro=18.75%
+    Adware              : F1=16.6%  P=56.2%  R=9.8% <-- minority
+    Benign              : F1=24.8%  P=55.3%  R=16.0% <-- minority
+    Ransomware          : F1=25.3%  P=15.2%  R=74.9% <-- minority
+    SMS_Malware         : F1=8.4%  P=24.7%  R=5.1% <-- minority
+    Scareware           : F1=18.6%  P=18.0%  R=19.3% <-- minority
+ Round time: 166.4s
+   [AOA] Scores  : [0.201 0.288 0.282 0.288 0.195 0.288 0.288 0.251 0.513 0.288]
+   [AOA] Selected: clients [2, 4, 6, 7, 9]
+────────────────────────────────────────────────────────────
+ Round  19/30  [ENSEMBLE]
+   Client  2: val_f1=14.5%  val_acc=17.4%
+   Client  4: val_f1=24.7%  val_acc=40.7%
+   Client  6: val_f1=13.5%  val_acc=13.7%
+   Client  7: val_f1=18.1%  val_acc=45.9%
+   Client  9: val_f1=19.4%  val_acc=32.3%
+
+[Round  19 | ensemble] Acc=31.09%  F1-macro=22.98%
+    Adware              : F1=16.5%  P=58.7%  R=9.6% <-- minority
+    Benign              : F1=46.6%  P=51.9%  R=42.2%
+    Ransomware          : F1=24.4%  P=16.0%  R=51.8% <-- minority
+    SMS_Malware         : F1=9.7%  P=22.2%  R=6.2% <-- minority
+    Scareware           : F1=17.7%  P=18.5%  R=17.0% <-- minority
+ Round time: 346.8s
+   [AOA] Scores  : [0.28  0.215 0.28  0.223 0.28  0.2   0.282 0.28  0.48  0.28 ]
+   [AOA] Selected: clients [1, 3, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  20/30  [ENSEMBLE]
+   Client  1: val_f1=17.6%  val_acc=21.2%
+   Client  3: val_f1=18.7%  val_acc=29.7%
+   Client  7: val_f1=17.2%  val_acc=42.9%
+   Client  9: val_f1=18.3%  val_acc=26.5%
+   Client 10: val_f1=19.3%  val_acc=58.8%
+
+[Round  20 | ensemble] Acc=35.58%  F1-macro=23.94%
+    Adware              : F1=15.2%  P=66.6%  R=8.6% <-- minority
+    Benign              : F1=53.6%  P=50.2%  R=57.6%
+    Ransomware          : F1=23.4%  P=17.4%  R=35.9% <-- minority
+    SMS_Malware         : F1=13.9%  P=14.1%  R=13.7% <-- minority
+    Scareware           : F1=13.5%  P=18.8%  R=10.6% <-- minority
+ Round time: 374.2s
+   [AOA] Scores  : [0.495 0.362 0.453 0.362 0.362 0.362 0.211 0.362 0.37  0.28 ]
+   [AOA] Selected: clients [1, 2, 3, 5, 9]
+────────────────────────────────────────────────────────────
+ Round  21/30  [ENSEMBLE]
+   Client  1: val_f1=16.9%  val_acc=19.9%
+   Client  2: val_f1=14.3%  val_acc=17.2%
+   Client  3: val_f1=20.0%  val_acc=35.8%
+   Client  5: val_f1=22.6%  val_acc=30.0%
+   Client  9: val_f1=17.0%  val_acc=24.8%
+
+[Round  21 | ensemble] Acc=26.82%  F1-macro=22.48%
+    Adware              : F1=20.1%  P=39.6%  R=13.5% <-- minority
+    Benign              : F1=37.4%  P=53.7%  R=28.7%
+    Ransomware          : F1=24.8%  P=15.8%  R=58.3% <-- minority
+    SMS_Malware         : F1=11.8%  P=17.3%  R=9.0% <-- minority
+    Scareware           : F1=18.2%  P=17.9%  R=18.5% <-- minority
+ Round time: 178.1s
+   [AOA] Scores  : [0.189 0.28  0.231 0.304 0.327 0.304 0.304 0.304 0.493 0.304]
+   [AOA] Selected: clients [4, 5, 6, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  22/30  [ENSEMBLE]
+   Client  4: val_f1=24.1%  val_acc=39.8%
+   Client  5: val_f1=22.1%  val_acc=29.4%
+   Client  6: val_f1=13.8%  val_acc=14.1%
+   Client  8: val_f1=15.5%  val_acc=19.8%
+   Client  9: val_f1=18.0%  val_acc=27.3%
+
+[Round  22 | ensemble] Acc=30.58%  F1-macro=23.66%
+    Adware              : F1=19.1%  P=42.7%  R=12.3% <-- minority
+    Benign              : F1=45.5%  P=52.2%  R=40.3%
+    Ransomware          : F1=24.4%  P=16.1%  R=50.6% <-- minority
+    SMS_Malware         : F1=12.0%  P=17.4%  R=9.2% <-- minority
+    Scareware           : F1=17.3%  P=18.7%  R=16.1% <-- minority
+ Round time: 214.3s
+   [AOA] Scores  : [0.331 0.331 0.331 0.28  0.366 0.238 0.331 0.28  0.492 0.331]
+   [AOA] Selected: clients [1, 3, 5, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  23/30  [ENSEMBLE]
+   Client  1: val_f1=17.8%  val_acc=21.5%
+   Client  3: val_f1=18.7%  val_acc=29.4%
+   Client  5: val_f1=22.9%  val_acc=30.2%
+   Client  9: val_f1=18.2%  val_acc=28.0%
+   Client 10: val_f1=20.4%  val_acc=65.0%
+
+[Round  23 | ensemble] Acc=29.59%  F1-macro=21.40%
+    Adware              : F1=11.8%  P=80.0%  R=6.4% <-- minority
+    Benign              : F1=47.9%  P=51.0%  R=45.2%
+    Ransomware          : F1=13.0%  P=23.1%  R=9.1% <-- minority
+    SMS_Malware         : F1=16.4%  P=10.2%  R=41.9% <-- minority
+    Scareware           : F1=17.8%  P=17.7%  R=17.9% <-- minority
+ Round time: 317.7s
+   [AOA] Scores  : [0.242 0.291 0.233 0.291 0.48  0.291 0.291 0.291 0.22  0.28 ]
+   [AOA] Selected: clients [2, 4, 5, 6, 8]
+────────────────────────────────────────────────────────────
+ Round  24/30  [ENSEMBLE]
+   Client  2: val_f1=16.2%  val_acc=20.3%
+   Client  4: val_f1=24.2%  val_acc=41.0%
+   Client  5: val_f1=22.6%  val_acc=30.2%
+   Client  6: val_f1=14.3%  val_acc=14.2%
+   Client  8: val_f1=17.4%  val_acc=24.8%
+
+[Round  24 | ensemble] Acc=29.99%  F1-macro=23.46%
+    Adware              : F1=20.8%  P=38.8%  R=14.2% <-- minority
+    Benign              : F1=43.9%  P=52.3%  R=37.8%
+    Ransomware          : F1=24.5%  P=16.0%  R=51.7% <-- minority
+    SMS_Malware         : F1=9.7%  P=21.2%  R=6.3% <-- minority
+    Scareware           : F1=18.4%  P=18.6%  R=18.2% <-- minority
+ Round time: 322.6s
+   [AOA] Scores  : [0.312 0.267 0.312 0.293 0.48  0.223 0.312 0.295 0.312 0.312]
+   [AOA] Selected: clients [1, 3, 5, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  25/30  [ENSEMBLE]
+   Client  1: val_f1=17.4%  val_acc=20.7%
+   Client  3: val_f1=18.7%  val_acc=31.8%
+   Client  5: val_f1=21.5%  val_acc=28.3%
+   Client  9: val_f1=15.8%  val_acc=22.7%
+   Client 10: val_f1=19.4%  val_acc=66.7%
+
+[Round  25 | ensemble] Acc=36.07%  F1-macro=24.05%
+    Adware              : F1=12.8%  P=76.1%  R=7.0% <-- minority
+    Benign              : F1=54.2%  P=49.9%  R=59.1%
+    Ransomware          : F1=21.6%  P=18.1%  R=26.7% <-- minority
+    SMS_Malware         : F1=12.4%  P=13.8%  R=11.3% <-- minority
+    Scareware           : F1=19.3%  P=18.5%  R=20.3% <-- minority
+ Round time: 252.4s
+   [AOA] Scores  : [0.251 0.295 0.244 0.295 0.48  0.295 0.295 0.295 0.222 0.28 ]
+   [AOA] Selected: clients [2, 5, 6, 7, 8]
+────────────────────────────────────────────────────────────
+ Round  26/30  [ENSEMBLE]
+   Client  2: val_f1=16.3%  val_acc=22.4%
+   Client  5: val_f1=20.7%  val_acc=27.6%
+   Client  6: val_f1=14.6%  val_acc=15.9%
+   Client  7: val_f1=16.3%  val_acc=36.8%
+   Client  8: val_f1=15.8%  val_acc=21.3%
+
+[Round  26 | ensemble] Acc=29.06%  F1-macro=22.62%
+    Adware              : F1=16.5%  P=59.3%  R=9.6% <-- minority
+    Benign              : F1=42.6%  P=52.4%  R=35.8%
+    Ransomware          : F1=24.7%  P=15.8%  R=55.8% <-- minority
+    SMS_Malware         : F1=10.6%  P=21.6%  R=7.1% <-- minority
+    Scareware           : F1=18.7%  P=18.4%  R=19.1% <-- minority
+ Round time: 274.3s
+   [AOA] Scores  : [0.302 0.234 0.302 0.302 0.48  0.225 0.28  0.29  0.302 0.302]
+   [AOA] Selected: clients [1, 3, 5, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  27/30  [ENSEMBLE]
+   Client  1: val_f1=18.1%  val_acc=22.1%
+   Client  3: val_f1=17.7%  val_acc=28.8%
+   Client  5: val_f1=23.1%  val_acc=30.8%
+   Client  9: val_f1=18.3%  val_acc=27.9%
+   Client 10: val_f1=20.3%  val_acc=68.9%
+
+[Round  27 | ensemble] Acc=32.87%  F1-macro=18.65%
+    Adware              : F1=6.7%  P=90.4%  R=3.5% <-- minority
+    Benign              : F1=53.8%  P=50.0%  R=58.2%
+    Ransomware          : F1=15.0%  P=21.2%  R=11.6% <-- minority
+    SMS_Malware         : F1=16.3%  P=10.1%  R=42.1% <-- minority
+    Scareware           : F1=1.5%  P=18.4%  R=0.8% <-- minority
+ Round time: 259.3s
+   [AOA] Scores  : [0.247 0.29  0.238 0.29  0.48  0.29  0.29  0.29  0.205 0.28 ]
+   [AOA] Selected: clients [2, 4, 5, 6, 8]
+────────────────────────────────────────────────────────────
+ Round  28/30  [ENSEMBLE]
+   Client  2: val_f1=13.7%  val_acc=16.1%
+   Client  4: val_f1=23.6%  val_acc=39.1%
+   Client  5: val_f1=22.5%  val_acc=30.0%
+   Client  6: val_f1=16.1%  val_acc=17.5%
+   Client  8: val_f1=17.0%  val_acc=23.7%
+
+[Round  28 | ensemble] Acc=31.05%  F1-macro=23.85%
+    Adware              : F1=21.0%  P=37.9%  R=14.5% <-- minority
+    Benign              : F1=46.1%  P=52.0%  R=41.5%
+    Ransomware          : F1=24.1%  P=16.0%  R=48.6% <-- minority
+    SMS_Malware         : F1=11.1%  P=19.4%  R=7.8% <-- minority
+    Scareware           : F1=16.9%  P=18.5%  R=15.6% <-- minority
+ Round time: 262.1s
+   [AOA] Scores  : [0.316 0.267 0.316 0.297 0.48  0.225 0.316 0.312 0.316 0.316]
+   [AOA] Selected: clients [1, 3, 5, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  29/30  [ENSEMBLE]
+   Client  1: val_f1=17.7%  val_acc=21.4%
+   Client  3: val_f1=17.0%  val_acc=26.8%
+   Client  5: val_f1=21.8%  val_acc=28.5%
+   Client  9: val_f1=19.3%  val_acc=28.8%
+   Client 10: val_f1=20.5%  val_acc=69.7%
+
+[Round  29 | ensemble] Acc=31.08%  F1-macro=17.43%
+    Adware              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Benign              : F1=52.0%  P=50.3%  R=53.9%
+    Ransomware          : F1=18.9%  P=19.6%  R=18.2% <-- minority
+    SMS_Malware         : F1=16.2%  P=10.0%  R=42.3% <-- minority
+    Scareware           : F1=0.0%  P=18.9%  R=0.0% <-- minority
+ Round time: 289.9s
+   [AOA] Scores  : [0.245 0.291 0.241 0.291 0.48  0.291 0.291 0.291 0.211 0.28 ]
+   [AOA] Selected: clients [2, 4, 5, 6, 8]
+────────────────────────────────────────────────────────────
+ Round  30/30  [ENSEMBLE]
+   Client  2: val_f1=18.2%  val_acc=23.8%
+   Client  4: val_f1=24.5%  val_acc=41.7%
+   Client  5: val_f1=22.5%  val_acc=29.8%
+   Client  6: val_f1=16.4%  val_acc=18.6%
+   Client  8: val_f1=14.4%  val_acc=18.2%
+
+[Round  30 | ensemble] Acc=29.62%  F1-macro=23.69%
+    Adware              : F1=21.9%  P=34.8%  R=16.0% <-- minority
+    Benign              : F1=43.2%  P=52.3%  R=36.8%
+    Ransomware          : F1=24.4%  P=16.0%  R=51.4% <-- minority
+    SMS_Malware         : F1=11.6%  P=18.2%  R=8.5% <-- minority
+    Scareware           : F1=17.3%  P=18.9%  R=16.0% <-- minority
+ Round time: 294.1s
+Convergence plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017\cicandmal2017_dir05_convergence.png
+Confusion matrix saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017\cicandmal2017_dir05_cm_round30.png
+Per-class metrics plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017\cicandmal2017_dir05_perclass_round30.png
+
+============================================================
+ Training complete in 476.5 minutes
+ Best F1-macro: 24.20%
+ Results saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\cicandmal2017
+============================================================
+

@@ -1,0 +1,1968 @@
+
+============================================================
+ FL-AdroidMaLD  Phase 1
+ Device   : cpu
+ Rounds   : 70  (warmup=35)
+ Clients  : 10
+ Dist     : Dir_0.5
+============================================================
+
+[1/4] Loading dataset ...
+Loaded: 22029 samples, 125 features, 12 classes
+Class distribution:
+  Adware              :  5142
+  Backdoor            :   546
+  FileInfector        :   119
+  PUA                 :   625
+  Ransomware          :  1550
+  Riskware            :  6792
+  Scareware           :   424
+  Trojan              :  4025
+  Trojan_Banker       :   123
+  Trojan_Dropper      :   733
+  Trojan_SMS          :   911
+  Trojan_Spy          :  1039
+
+Global holdout split:
+  Train : 17623 samples (80%)
+  Test  : 4406 samples (20%) — LOCKED
+      Train=17623  Test=4406  Features=125  Classes=12
+
+[2/4] Distributing data (Dir_0.5) ...
+
+Generating all distributions...
+Done. Distributions generated: ['IID', 'Dir_1.0', 'Dir_0.5', 'Dir_0.1', 'Pathological']
+      Client  1:  1601 samples
+      Client  2:  1601 samples
+      Client  3:  1126 samples
+      Client  4:  2060 samples
+      Client  5:   861 samples
+      Client  6:  2003 samples
+      Client  7:  2527 samples
+      Client  8:  1463 samples
+      Client  9:  1608 samples
+      Client 10:  2773 samples
+
+[3/4] Initialising FL components ...
+
+[4/4] Starting FL training ...
+
+────────────────────────────────────────────────────────────
+ Round   1/70  [WARMUP]
+   Client  1: val_f1=27.1%  val_acc=75.7%
+   Client  2: val_f1=47.6%  val_acc=77.3%
+   Client  3: val_f1=38.1%  val_acc=63.7%
+   Client  4: val_f1=46.7%  val_acc=71.8%
+   Client  5: val_f1=43.3%  val_acc=66.5%
+   Client  6: val_f1=42.4%  val_acc=69.3%
+   Client  7: val_f1=35.0%  val_acc=62.8%
+   Client  8: val_f1=44.0%  val_acc=70.0%
+   Client  9: val_f1=28.3%  val_acc=72.7%
+   Client 10: val_f1=35.0%  val_acc=66.8%
+
+[Round   1 |   warmup] Acc=53.22%  F1-macro=37.17%
+    Adware              : F1=73.0%  P=77.7%  R=68.9%
+    Backdoor            : F1=32.7%  P=32.4%  R=33.0%
+    FileInfector        : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    PUA                 : F1=28.4%  P=44.8%  R=20.8% <-- minority
+    Ransomware          : F1=53.9%  P=70.7%  R=43.5%
+    Riskware            : F1=49.0%  P=76.5%  R=36.0%
+    Scareware           : F1=53.8%  P=43.5%  R=70.6%
+    Trojan              : F1=50.1%  P=35.5%  R=85.5%
+    Trojan_Banker       : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Trojan_Dropper      : F1=27.7%  P=38.1%  R=21.8% <-- minority
+    Trojan_SMS          : F1=65.1%  P=52.5%  R=85.7%
+    Trojan_Spy          : F1=12.2%  P=39.5%  R=7.2% <-- minority
+ Round time: 149.7s
+────────────────────────────────────────────────────────────
+ Round   2/70  [WARMUP]
+   Client  1: val_f1=32.8%  val_acc=71.7%
+   Client  2: val_f1=47.1%  val_acc=77.6%
+   Client  3: val_f1=43.9%  val_acc=73.5%
+   Client  4: val_f1=51.7%  val_acc=77.7%
+   Client  5: val_f1=48.6%  val_acc=72.3%
+   Client  6: val_f1=50.6%  val_acc=82.8%
+   Client  7: val_f1=48.0%  val_acc=83.8%
+   Client  8: val_f1=40.6%  val_acc=72.0%
+   Client  9: val_f1=30.9%  val_acc=72.4%
+   Client 10: val_f1=41.9%  val_acc=77.8%
+
+[Round   2 |   warmup] Acc=77.46%  F1-macro=52.03%
+    Adware              : F1=93.5%  P=94.2%  R=92.8%
+    Backdoor            : F1=44.7%  P=47.4%  R=42.2%
+    FileInfector        : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    PUA                 : F1=52.6%  P=42.6%  R=68.8%
+    Ransomware          : F1=69.9%  P=73.8%  R=66.5%
+    Riskware            : F1=83.5%  P=84.0%  R=83.0%
+    Scareware           : F1=64.9%  P=52.1%  R=85.9%
+    Trojan              : F1=80.1%  P=74.3%  R=86.8%
+    Trojan_Banker       : F1=3.5%  P=3.1%  R=4.0% <-- minority
+    Trojan_Dropper      : F1=42.6%  P=56.8%  R=34.0%
+    Trojan_SMS          : F1=72.9%  P=65.1%  R=83.0%
+    Trojan_Spy          : F1=16.1%  P=50.0%  R=9.6% <-- minority
+ Round time: 159.3s
+────────────────────────────────────────────────────────────
+ Round   3/70  [WARMUP]
+   Client  1: val_f1=43.7%  val_acc=79.8%
+   Client  2: val_f1=56.8%  val_acc=84.4%
+   Client  3: val_f1=54.0%  val_acc=78.3%
+   Client  4: val_f1=56.2%  val_acc=81.8%
+   Client  5: val_f1=52.7%  val_acc=74.6%
+   Client  6: val_f1=50.5%  val_acc=82.5%
+   Client  7: val_f1=50.2%  val_acc=83.6%
+   Client  8: val_f1=57.1%  val_acc=86.0%
+   Client  9: val_f1=34.7%  val_acc=60.9%
+   Client 10: val_f1=47.7%  val_acc=84.3%
+
+[Round   3 |   warmup] Acc=84.09%  F1-macro=61.50%
+    Adware              : F1=97.2%  P=95.9%  R=98.4%
+    Backdoor            : F1=46.9%  P=52.9%  R=42.2%
+    FileInfector        : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    PUA                 : F1=63.7%  P=55.3%  R=75.2%
+    Ransomware          : F1=74.6%  P=78.6%  R=71.0%
+    Riskware            : F1=89.2%  P=90.2%  R=88.3%
+    Scareware           : F1=84.0%  P=76.7%  R=92.9%
+    Trojan              : F1=88.2%  P=84.6%  R=92.0%
+    Trojan_Banker       : F1=10.5%  P=9.4%  R=12.0% <-- minority
+    Trojan_Dropper      : F1=54.1%  P=62.5%  R=47.6%
+    Trojan_SMS          : F1=75.5%  P=73.2%  R=78.0%
+    Trojan_Spy          : F1=54.1%  P=62.7%  R=47.6%
+ Round time: 171.7s
+────────────────────────────────────────────────────────────
+ Round   4/70  [WARMUP]
+   Client  1: val_f1=56.9%  val_acc=87.2%
+   Client  2: val_f1=58.3%  val_acc=85.0%
+   Client  3: val_f1=56.2%  val_acc=81.9%
+   Client  4: val_f1=59.0%  val_acc=84.0%
+   Client  5: val_f1=55.2%  val_acc=85.0%
+   Client  6: val_f1=60.8%  val_acc=87.8%
+   Client  7: val_f1=50.4%  val_acc=79.4%
+   Client  8: val_f1=51.2%  val_acc=83.6%
+   Client  9: val_f1=45.0%  val_acc=80.7%
+   Client 10: val_f1=54.1%  val_acc=82.0%
+
+[Round   4 |   warmup] Acc=86.25%  F1-macro=64.94%
+    Adware              : F1=98.1%  P=98.0%  R=98.2%
+    Backdoor            : F1=53.0%  P=50.4%  R=56.0%
+    FileInfector        : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    PUA                 : F1=66.2%  P=60.7%  R=72.8%
+    Ransomware          : F1=77.2%  P=83.8%  R=71.6%
+    Riskware            : F1=91.6%  P=92.3%  R=90.9%
+    Scareware           : F1=88.0%  P=81.8%  R=95.3%
+    Trojan              : F1=91.2%  P=91.4%  R=91.1%
+    Trojan_Banker       : F1=13.9%  P=10.6%  R=20.0% <-- minority
+    Trojan_Dropper      : F1=60.1%  P=62.5%  R=57.8%
+    Trojan_SMS          : F1=74.0%  P=74.4%  R=73.6%
+    Trojan_Spy          : F1=65.9%  P=62.9%  R=69.2%
+ Round time: 158.2s
+────────────────────────────────────────────────────────────
+ Round   5/70  [WARMUP]
+   Client  1: val_f1=58.0%  val_acc=87.5%
+   Client  2: val_f1=51.0%  val_acc=84.4%
+   Client  3: val_f1=61.3%  val_acc=82.3%
+   Client  4: val_f1=60.8%  val_acc=86.7%
+   Client  5: val_f1=63.5%  val_acc=83.2%
+   Client  6: val_f1=60.1%  val_acc=86.5%
+   Client  7: val_f1=51.4%  val_acc=86.0%
+   Client  8: val_f1=61.4%  val_acc=89.1%
+   Client  9: val_f1=46.1%  val_acc=77.3%
+   Client 10: val_f1=52.4%  val_acc=85.6%
+
+[Round   5 |   warmup] Acc=87.93%  F1-macro=67.49%
+    Adware              : F1=98.3%  P=97.9%  R=98.7%
+    Backdoor            : F1=57.9%  P=57.1%  R=58.7%
+    FileInfector        : F1=6.5%  P=14.3%  R=4.2% <-- minority
+    PUA                 : F1=69.9%  P=71.1%  R=68.8%
+    Ransomware          : F1=79.9%  P=84.5%  R=75.8%
+    Riskware            : F1=92.6%  P=93.9%  R=91.2%
+    Scareware           : F1=90.9%  P=87.9%  R=94.1%
+    Trojan              : F1=91.8%  P=90.1%  R=93.5%
+    Trojan_Banker       : F1=6.7%  P=5.7%  R=8.0% <-- minority
+    Trojan_Dropper      : F1=65.6%  P=62.2%  R=69.4%
+    Trojan_SMS          : F1=78.9%  P=77.7%  R=80.2%
+    Trojan_Spy          : F1=70.9%  P=69.3%  R=72.6%
+ Round time: 144.8s
+────────────────────────────────────────────────────────────
+ Round   6/70  [WARMUP]
+   Client  1: val_f1=60.9%  val_acc=89.1%
+   Client  2: val_f1=58.5%  val_acc=87.9%
+   Client  3: val_f1=74.9%  val_acc=87.2%
+   Client  4: val_f1=64.0%  val_acc=86.7%
+   Client  5: val_f1=61.8%  val_acc=80.9%
+   Client  6: val_f1=64.4%  val_acc=88.3%
+   Client  7: val_f1=50.5%  val_acc=82.8%
+   Client  8: val_f1=59.0%  val_acc=83.6%
+   Client  9: val_f1=59.4%  val_acc=88.2%
+   Client 10: val_f1=56.4%  val_acc=88.1%
+
+[Round   6 |   warmup] Acc=88.56%  F1-macro=69.55%
+    Adware              : F1=98.6%  P=98.4%  R=98.9%
+    Backdoor            : F1=56.5%  P=57.0%  R=56.0%
+    FileInfector        : F1=17.0%  P=17.4%  R=16.7% <-- minority
+    PUA                 : F1=69.2%  P=66.7%  R=72.0%
+    Ransomware          : F1=80.5%  P=84.7%  R=76.8%
+    Riskware            : F1=93.0%  P=94.7%  R=91.4%
+    Scareware           : F1=90.9%  P=87.9%  R=94.1%
+    Trojan              : F1=93.4%  P=93.2%  R=93.7%
+    Trojan_Banker       : F1=14.8%  P=13.8%  R=16.0% <-- minority
+    Trojan_Dropper      : F1=69.6%  P=64.5%  R=75.5%
+    Trojan_SMS          : F1=78.4%  P=81.2%  R=75.8%
+    Trojan_Spy          : F1=72.6%  P=67.2%  R=78.8%
+ Round time: 148.0s
+────────────────────────────────────────────────────────────
+ Round   7/70  [WARMUP]
+   Client  1: val_f1=58.7%  val_acc=89.1%
+   Client  2: val_f1=62.3%  val_acc=87.5%
+   Client  3: val_f1=73.5%  val_acc=85.4%
+   Client  4: val_f1=61.1%  val_acc=87.6%
+   Client  5: val_f1=65.3%  val_acc=85.5%
+   Client  6: val_f1=64.8%  val_acc=85.0%
+   Client  7: val_f1=59.4%  val_acc=88.9%
+   Client  8: val_f1=71.0%  val_acc=89.8%
+   Client  9: val_f1=61.7%  val_acc=81.7%
+   Client 10: val_f1=61.1%  val_acc=87.6%
+
+[Round   7 |   warmup] Acc=89.90%  F1-macro=72.09%
+    Adware              : F1=99.1%  P=99.4%  R=98.7%
+    Backdoor            : F1=58.6%  P=59.4%  R=57.8%
+    FileInfector        : F1=21.6%  P=30.8%  R=16.7% <-- minority
+    PUA                 : F1=69.5%  P=67.2%  R=72.0%
+    Ransomware          : F1=82.6%  P=85.8%  R=79.7%
+    Riskware            : F1=93.9%  P=94.6%  R=93.2%
+    Scareware           : F1=92.7%  P=88.3%  R=97.6%
+    Trojan              : F1=94.2%  P=94.1%  R=94.3%
+    Trojan_Banker       : F1=22.6%  P=21.4%  R=24.0% <-- minority
+    Trojan_Dropper      : F1=72.7%  P=66.9%  R=79.6%
+    Trojan_SMS          : F1=81.2%  P=82.9%  R=79.7%
+    Trojan_Spy          : F1=76.3%  P=73.1%  R=79.8%
+ Round time: 173.0s
+────────────────────────────────────────────────────────────
+ Round   8/70  [WARMUP]
+   Client  1: val_f1=70.1%  val_acc=92.8%
+   Client  2: val_f1=56.3%  val_acc=81.9%
+   Client  3: val_f1=76.6%  val_acc=88.9%
+   Client  4: val_f1=73.6%  val_acc=90.0%
+   Client  5: val_f1=63.1%  val_acc=82.7%
+   Client  6: val_f1=64.1%  val_acc=85.0%
+   Client  7: val_f1=58.0%  val_acc=88.3%
+   Client  8: val_f1=68.1%  val_acc=90.8%
+   Client  9: val_f1=48.8%  val_acc=86.3%
+   Client 10: val_f1=61.3%  val_acc=89.9%
+
+[Round   8 |   warmup] Acc=90.04%  F1-macro=73.56%
+    Adware              : F1=98.6%  P=97.9%  R=99.2%
+    Backdoor            : F1=57.5%  P=57.3%  R=57.8%
+    FileInfector        : F1=30.0%  P=37.5%  R=25.0%
+    PUA                 : F1=70.9%  P=70.6%  R=71.2%
+    Ransomware          : F1=83.4%  P=86.8%  R=80.3%
+    Riskware            : F1=94.1%  P=93.3%  R=94.9%
+    Scareware           : F1=94.7%  P=94.2%  R=95.3%
+    Trojan              : F1=93.4%  P=96.2%  R=90.8%
+    Trojan_Banker       : F1=26.4%  P=25.0%  R=28.0% <-- minority
+    Trojan_Dropper      : F1=70.8%  P=62.1%  R=82.3%
+    Trojan_SMS          : F1=82.8%  P=86.7%  R=79.1%
+    Trojan_Spy          : F1=80.1%  P=79.9%  R=80.3%
+ Round time: 172.7s
+────────────────────────────────────────────────────────────
+ Round   9/70  [WARMUP]
+   Client  1: val_f1=65.0%  val_acc=91.0%
+   Client  2: val_f1=75.0%  val_acc=92.8%
+   Client  3: val_f1=76.1%  val_acc=89.4%
+   Client  4: val_f1=64.3%  val_acc=88.8%
+   Client  5: val_f1=71.1%  val_acc=87.3%
+   Client  6: val_f1=61.4%  val_acc=83.8%
+   Client  7: val_f1=57.8%  val_acc=90.1%
+   Client  8: val_f1=63.0%  val_acc=86.7%
+   Client  9: val_f1=56.7%  val_acc=85.1%
+   Client 10: val_f1=63.0%  val_acc=89.7%
+
+[Round   9 |   warmup] Acc=90.31%  F1-macro=74.56%
+    Adware              : F1=99.2%  P=99.3%  R=99.1%
+    Backdoor            : F1=58.9%  P=60.0%  R=57.8%
+    FileInfector        : F1=34.8%  P=36.4%  R=33.3%
+    PUA                 : F1=71.4%  P=75.2%  R=68.0%
+    Ransomware          : F1=84.6%  P=87.0%  R=82.3%
+    Riskware            : F1=93.8%  P=95.9%  R=91.8%
+    Scareware           : F1=94.3%  P=91.2%  R=97.6%
+    Trojan              : F1=94.3%  P=92.6%  R=96.0%
+    Trojan_Banker       : F1=30.0%  P=25.7%  R=36.0%
+    Trojan_Dropper      : F1=74.3%  P=69.6%  R=79.6%
+    Trojan_SMS          : F1=82.3%  P=85.7%  R=79.1%
+    Trojan_Spy          : F1=76.9%  P=70.4%  R=84.6%
+ Round time: 173.1s
+────────────────────────────────────────────────────────────
+ Round  10/70  [WARMUP]
+   Client  1: val_f1=65.1%  val_acc=93.1%
+   Client  2: val_f1=68.9%  val_acc=90.7%
+   Client  3: val_f1=68.6%  val_acc=85.4%
+   Client  4: val_f1=65.6%  val_acc=90.3%
+   Client  5: val_f1=69.0%  val_acc=85.5%
+   Client  6: val_f1=69.6%  val_acc=89.0%
+   Client  7: val_f1=55.8%  val_acc=89.1%
+   Client  8: val_f1=72.2%  val_acc=90.8%
+   Client  9: val_f1=57.7%  val_acc=81.4%
+   Client 10: val_f1=63.3%  val_acc=89.4%
+
+[Round  10 |   warmup] Acc=91.40%  F1-macro=76.28%
+    Adware              : F1=99.3%  P=99.4%  R=99.1%
+    Backdoor            : F1=62.7%  P=62.2%  R=63.3%
+    FileInfector        : F1=31.4%  P=29.6%  R=33.3%
+    PUA                 : F1=72.2%  P=75.0%  R=69.6%
+    Ransomware          : F1=85.7%  P=87.3%  R=84.2%
+    Riskware            : F1=95.0%  P=95.9%  R=94.2%
+    Scareware           : F1=93.2%  P=90.1%  R=96.5%
+    Trojan              : F1=94.6%  P=92.9%  R=96.4%
+    Trojan_Banker       : F1=38.1%  P=31.6%  R=48.0%
+    Trojan_Dropper      : F1=75.4%  P=72.8%  R=78.2%
+    Trojan_SMS          : F1=85.4%  P=91.2%  R=80.2%
+    Trojan_Spy          : F1=82.4%  P=81.6%  R=83.2%
+ Round time: 173.2s
+────────────────────────────────────────────────────────────
+ Round  11/70  [WARMUP]
+   Client  1: val_f1=63.0%  val_acc=91.6%
+   Client  2: val_f1=64.7%  val_acc=90.0%
+   Client  3: val_f1=75.3%  val_acc=89.8%
+   Client  4: val_f1=64.8%  val_acc=89.8%
+   Client  5: val_f1=74.0%  val_acc=87.9%
+   Client  6: val_f1=64.6%  val_acc=89.0%
+   Client  7: val_f1=61.0%  val_acc=87.5%
+   Client  8: val_f1=77.1%  val_acc=91.5%
+   Client  9: val_f1=54.2%  val_acc=78.6%
+   Client 10: val_f1=62.0%  val_acc=86.8%
+
+[Round  11 |   warmup] Acc=91.63%  F1-macro=76.02%
+    Adware              : F1=99.3%  P=99.5%  R=99.1%
+    Backdoor            : F1=61.3%  P=56.6%  R=67.0%
+    FileInfector        : F1=23.8%  P=27.8%  R=20.8% <-- minority
+    PUA                 : F1=73.8%  P=79.6%  R=68.8%
+    Ransomware          : F1=85.9%  P=87.3%  R=84.5%
+    Riskware            : F1=95.4%  P=96.2%  R=94.5%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=95.2%  P=94.6%  R=95.8%
+    Trojan_Banker       : F1=40.0%  P=34.3%  R=48.0%
+    Trojan_Dropper      : F1=75.2%  P=70.7%  R=80.3%
+    Trojan_SMS          : F1=84.8%  P=88.6%  R=81.3%
+    Trojan_Spy          : F1=82.6%  P=80.7%  R=84.6%
+ Round time: 173.7s
+────────────────────────────────────────────────────────────
+ Round  12/70  [WARMUP]
+   Client  1: val_f1=66.8%  val_acc=91.9%
+   Client  2: val_f1=71.9%  val_acc=91.6%
+   Client  3: val_f1=78.7%  val_acc=89.8%
+   Client  4: val_f1=68.0%  val_acc=91.3%
+   Client  5: val_f1=71.9%  val_acc=89.0%
+   Client  6: val_f1=62.5%  val_acc=84.0%
+   Client  7: val_f1=58.2%  val_acc=89.9%
+   Client  8: val_f1=68.5%  val_acc=88.7%
+   Client  9: val_f1=57.5%  val_acc=84.8%
+   Client 10: val_f1=64.3%  val_acc=91.4%
+
+[Round  12 |   warmup] Acc=91.53%  F1-macro=76.72%
+    Adware              : F1=99.1%  P=99.7%  R=98.5%
+    Backdoor            : F1=61.5%  P=53.4%  R=72.5%
+    FileInfector        : F1=26.9%  P=25.0%  R=29.2% <-- minority
+    PUA                 : F1=74.1%  P=80.4%  R=68.8%
+    Ransomware          : F1=87.6%  P=91.0%  R=84.5%
+    Riskware            : F1=94.7%  P=96.3%  R=93.1%
+    Scareware           : F1=95.0%  P=90.4%  R=100.0%
+    Trojan              : F1=95.7%  P=95.1%  R=96.3%
+    Trojan_Banker       : F1=40.0%  P=32.5%  R=52.0%
+    Trojan_Dropper      : F1=78.7%  P=80.7%  R=76.9%
+    Trojan_SMS          : F1=88.0%  P=89.7%  R=86.3%
+    Trojan_Spy          : F1=79.4%  P=73.7%  R=86.1%
+ Round time: 172.8s
+────────────────────────────────────────────────────────────
+ Round  13/70  [WARMUP]
+   Client  1: val_f1=74.9%  val_acc=93.5%
+   Client  2: val_f1=68.3%  val_acc=91.0%
+   Client  3: val_f1=82.2%  val_acc=91.6%
+   Client  4: val_f1=66.1%  val_acc=89.8%
+   Client  5: val_f1=76.9%  val_acc=88.4%
+   Client  6: val_f1=72.3%  val_acc=89.0%
+   Client  7: val_f1=63.6%  val_acc=91.9%
+   Client  8: val_f1=70.4%  val_acc=89.8%
+   Client  9: val_f1=62.6%  val_acc=89.4%
+   Client 10: val_f1=66.9%  val_acc=89.5%
+
+[Round  13 |   warmup] Acc=91.92%  F1-macro=77.42%
+    Adware              : F1=99.2%  P=99.7%  R=98.6%
+    Backdoor            : F1=65.1%  P=56.4%  R=77.1%
+    FileInfector        : F1=29.6%  P=26.7%  R=33.3% <-- minority
+    PUA                 : F1=76.5%  P=80.5%  R=72.8%
+    Ransomware          : F1=87.7%  P=90.1%  R=85.5%
+    Riskware            : F1=95.0%  P=96.7%  R=93.4%
+    Scareware           : F1=95.0%  P=90.4%  R=100.0%
+    Trojan              : F1=95.7%  P=95.4%  R=96.0%
+    Trojan_Banker       : F1=37.3%  P=32.4%  R=44.0%
+    Trojan_Dropper      : F1=79.0%  P=79.9%  R=78.2%
+    Trojan_SMS          : F1=87.7%  P=91.1%  R=84.6%
+    Trojan_Spy          : F1=81.1%  P=75.5%  R=87.5%
+ Round time: 173.5s
+────────────────────────────────────────────────────────────
+ Round  14/70  [WARMUP]
+   Client  1: val_f1=76.6%  val_acc=94.4%
+   Client  2: val_f1=70.7%  val_acc=91.3%
+   Client  3: val_f1=75.8%  val_acc=91.2%
+   Client  4: val_f1=77.7%  val_acc=90.8%
+   Client  5: val_f1=68.2%  val_acc=87.9%
+   Client  6: val_f1=74.7%  val_acc=91.0%
+   Client  7: val_f1=61.5%  val_acc=89.5%
+   Client  8: val_f1=72.9%  val_acc=89.8%
+   Client  9: val_f1=65.1%  val_acc=88.8%
+   Client 10: val_f1=65.5%  val_acc=89.4%
+
+[Round  14 |   warmup] Acc=92.42%  F1-macro=78.44%
+    Adware              : F1=99.3%  P=99.5%  R=99.0%
+    Backdoor            : F1=68.1%  P=62.8%  R=74.3%
+    FileInfector        : F1=37.2%  P=42.1%  R=33.3%
+    PUA                 : F1=74.6%  P=76.5%  R=72.8%
+    Ransomware          : F1=88.3%  P=90.5%  R=86.1%
+    Riskware            : F1=95.7%  P=96.1%  R=95.3%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=95.8%  P=96.0%  R=95.7%
+    Trojan_Banker       : F1=38.2%  P=30.2%  R=52.0%
+    Trojan_Dropper      : F1=78.4%  P=75.5%  R=81.6%
+    Trojan_SMS          : F1=86.4%  P=89.4%  R=83.5%
+    Trojan_Spy          : F1=83.3%  P=82.5%  R=84.1%
+ Round time: 172.9s
+────────────────────────────────────────────────────────────
+ Round  15/70  [WARMUP]
+   Client  1: val_f1=74.4%  val_acc=94.4%
+   Client  2: val_f1=74.6%  val_acc=92.8%
+   Client  3: val_f1=73.5%  val_acc=88.9%
+   Client  4: val_f1=70.9%  val_acc=93.0%
+   Client  5: val_f1=74.1%  val_acc=89.6%
+   Client  6: val_f1=70.1%  val_acc=90.8%
+   Client  7: val_f1=62.9%  val_acc=92.9%
+   Client  8: val_f1=73.2%  val_acc=90.1%
+   Client  9: val_f1=61.4%  val_acc=85.7%
+   Client 10: val_f1=75.8%  val_acc=93.5%
+
+[Round  15 |   warmup] Acc=92.96%  F1-macro=79.56%
+    Adware              : F1=99.3%  P=99.7%  R=98.9%
+    Backdoor            : F1=70.0%  P=64.1%  R=77.1%
+    FileInfector        : F1=44.9%  P=44.0%  R=45.8%
+    PUA                 : F1=76.6%  P=81.8%  R=72.0%
+    Ransomware          : F1=89.4%  P=90.4%  R=88.4%
+    Riskware            : F1=96.0%  P=96.2%  R=95.8%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=95.9%  P=95.4%  R=96.4%
+    Trojan_Banker       : F1=34.5%  P=30.3%  R=40.0%
+    Trojan_Dropper      : F1=81.9%  P=82.2%  R=81.6%
+    Trojan_SMS          : F1=87.6%  P=92.1%  R=83.5%
+    Trojan_Spy          : F1=83.7%  P=82.3%  R=85.1%
+ Round time: 172.7s
+────────────────────────────────────────────────────────────
+ Round  16/70  [WARMUP]
+   Client  1: val_f1=78.6%  val_acc=95.0%
+   Client  2: val_f1=68.6%  val_acc=92.2%
+   Client  3: val_f1=75.0%  val_acc=90.7%
+   Client  4: val_f1=73.8%  val_acc=92.7%
+   Client  5: val_f1=73.7%  val_acc=88.4%
+   Client  6: val_f1=74.3%  val_acc=92.3%
+   Client  7: val_f1=57.1%  val_acc=91.9%
+   Client  8: val_f1=71.4%  val_acc=90.4%
+   Client  9: val_f1=68.2%  val_acc=88.8%
+   Client 10: val_f1=75.0%  val_acc=94.2%
+
+[Round  16 |   warmup] Acc=93.30%  F1-macro=80.00%
+    Adware              : F1=99.4%  P=99.9%  R=98.8%
+    Backdoor            : F1=70.3%  P=65.4%  R=76.1%
+    FileInfector        : F1=37.2%  P=42.1%  R=33.3%
+    PUA                 : F1=77.0%  P=80.7%  R=73.6%
+    Ransomware          : F1=89.7%  P=91.0%  R=88.4%
+    Riskware            : F1=96.1%  P=96.2%  R=96.1%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=95.9%  P=95.3%  R=96.5%
+    Trojan_Banker       : F1=41.5%  P=39.3%  R=44.0%
+    Trojan_Dropper      : F1=83.7%  P=83.7%  R=83.7%
+    Trojan_SMS          : F1=88.8%  P=92.8%  R=85.2%
+    Trojan_Spy          : F1=84.9%  P=82.1%  R=88.0%
+ Round time: 172.7s
+────────────────────────────────────────────────────────────
+ Round  17/70  [WARMUP]
+   Client  1: val_f1=71.5%  val_acc=95.0%
+   Client  2: val_f1=75.4%  val_acc=93.1%
+   Client  3: val_f1=85.5%  val_acc=94.2%
+   Client  4: val_f1=71.8%  val_acc=93.2%
+   Client  5: val_f1=70.4%  val_acc=89.6%
+   Client  6: val_f1=73.9%  val_acc=91.5%
+   Client  7: val_f1=61.3%  val_acc=94.1%
+   Client  8: val_f1=68.0%  val_acc=88.1%
+   Client  9: val_f1=68.9%  val_acc=90.4%
+   Client 10: val_f1=78.7%  val_acc=94.8%
+
+[Round  17 |   warmup] Acc=93.85%  F1-macro=81.98%
+    Adware              : F1=99.2%  P=99.3%  R=99.1%
+    Backdoor            : F1=72.5%  P=66.4%  R=79.8%
+    FileInfector        : F1=50.0%  P=46.4%  R=54.2%
+    PUA                 : F1=77.5%  P=80.9%  R=74.4%
+    Ransomware          : F1=91.2%  P=92.1%  R=90.3%
+    Riskware            : F1=96.3%  P=97.1%  R=95.5%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=96.3%  P=95.1%  R=97.4%
+    Trojan_Banker       : F1=41.7%  P=43.5%  R=40.0%
+    Trojan_Dropper      : F1=85.1%  P=86.6%  R=83.7%
+    Trojan_SMS          : F1=91.3%  P=93.6%  R=89.0%
+    Trojan_Spy          : F1=86.7%  P=85.5%  R=88.0%
+ Round time: 172.6s
+────────────────────────────────────────────────────────────
+ Round  18/70  [WARMUP]
+   Client  1: val_f1=78.9%  val_acc=95.3%
+   Client  2: val_f1=78.1%  val_acc=94.4%
+   Client  3: val_f1=78.6%  val_acc=92.5%
+   Client  4: val_f1=72.9%  val_acc=92.2%
+   Client  5: val_f1=76.7%  val_acc=92.5%
+   Client  6: val_f1=70.4%  val_acc=91.8%
+   Client  7: val_f1=63.0%  val_acc=92.9%
+   Client  8: val_f1=79.7%  val_acc=92.8%
+   Client  9: val_f1=65.5%  val_acc=87.0%
+   Client 10: val_f1=79.7%  val_acc=93.7%
+
+[Round  18 |   warmup] Acc=94.19%  F1-macro=82.12%
+    Adware              : F1=99.4%  P=99.7%  R=99.1%
+    Backdoor            : F1=73.1%  P=67.4%  R=79.8%
+    FileInfector        : F1=47.4%  P=64.3%  R=37.5%
+    PUA                 : F1=79.1%  P=86.7%  R=72.8%
+    Ransomware          : F1=91.3%  P=91.3%  R=91.3%
+    Riskware            : F1=96.7%  P=97.2%  R=96.2%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=96.6%  P=95.5%  R=97.6%
+    Trojan_Banker       : F1=43.1%  P=42.3%  R=44.0%
+    Trojan_Dropper      : F1=84.6%  P=83.4%  R=85.7%
+    Trojan_SMS          : F1=90.6%  P=91.6%  R=89.6%
+    Trojan_Spy          : F1=87.7%  P=86.4%  R=88.9%
+ Round time: 172.9s
+────────────────────────────────────────────────────────────
+ Round  19/70  [WARMUP]
+   Client  1: val_f1=69.3%  val_acc=93.5%
+   Client  2: val_f1=76.5%  val_acc=94.4%
+   Client  3: val_f1=74.5%  val_acc=92.0%
+   Client  4: val_f1=70.7%  val_acc=93.4%
+   Client  5: val_f1=76.4%  val_acc=91.3%
+   Client  6: val_f1=75.8%  val_acc=92.8%
+   Client  7: val_f1=65.4%  val_acc=92.5%
+   Client  8: val_f1=79.8%  val_acc=93.9%
+   Client  9: val_f1=64.6%  val_acc=87.6%
+   Client 10: val_f1=72.0%  val_acc=93.7%
+
+[Round  19 |   warmup] Acc=94.28%  F1-macro=82.90%
+    Adware              : F1=99.4%  P=99.6%  R=99.1%
+    Backdoor            : F1=74.5%  P=66.7%  R=84.4%
+    FileInfector        : F1=57.1%  P=56.0%  R=58.3%
+    PUA                 : F1=77.9%  P=87.1%  R=70.4%
+    Ransomware          : F1=91.2%  P=92.1%  R=90.3%
+    Riskware            : F1=96.9%  P=96.9%  R=96.8%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=97.2%  P=96.8%  R=97.5%
+    Trojan_Banker       : F1=42.1%  P=37.5%  R=48.0%
+    Trojan_Dropper      : F1=87.0%  P=89.9%  R=84.4%
+    Trojan_SMS          : F1=87.6%  P=90.1%  R=85.2%
+    Trojan_Spy          : F1=87.9%  P=86.5%  R=89.4%
+ Round time: 172.9s
+────────────────────────────────────────────────────────────
+ Round  20/70  [WARMUP]
+   Client  1: val_f1=76.9%  val_acc=96.0%
+   Client  2: val_f1=79.6%  val_acc=93.8%
+   Client  3: val_f1=81.3%  val_acc=93.8%
+   Client  4: val_f1=70.6%  val_acc=92.5%
+   Client  5: val_f1=75.0%  val_acc=90.8%
+   Client  6: val_f1=75.7%  val_acc=92.3%
+   Client  7: val_f1=57.9%  val_acc=88.7%
+   Client  8: val_f1=79.1%  val_acc=93.5%
+   Client  9: val_f1=63.9%  val_acc=92.2%
+   Client 10: val_f1=72.8%  val_acc=94.8%
+
+[Round  20 |   warmup] Acc=94.78%  F1-macro=82.91%
+    Adware              : F1=99.5%  P=99.9%  R=99.1%
+    Backdoor            : F1=72.7%  P=65.4%  R=81.7%
+    FileInfector        : F1=53.3%  P=57.1%  R=50.0%
+    PUA                 : F1=79.0%  P=85.2%  R=73.6%
+    Ransomware          : F1=92.7%  P=93.2%  R=92.3%
+    Riskware            : F1=97.3%  P=97.0%  R=97.6%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=97.6%  P=97.6%  R=97.5%
+    Trojan_Banker       : F1=40.0%  P=36.7%  R=44.0%
+    Trojan_Dropper      : F1=87.4%  P=87.7%  R=87.1%
+    Trojan_SMS          : F1=88.7%  P=91.3%  R=86.3%
+    Trojan_Spy          : F1=90.8%  P=91.3%  R=90.4%
+ Round time: 173.7s
+────────────────────────────────────────────────────────────
+ Round  21/70  [WARMUP]
+   Client  1: val_f1=78.3%  val_acc=95.6%
+   Client  2: val_f1=75.5%  val_acc=94.1%
+   Client  3: val_f1=78.2%  val_acc=92.9%
+   Client  4: val_f1=71.7%  val_acc=93.7%
+   Client  5: val_f1=76.2%  val_acc=90.2%
+   Client  6: val_f1=74.8%  val_acc=92.0%
+   Client  7: val_f1=71.5%  val_acc=94.5%
+   Client  8: val_f1=79.1%  val_acc=94.2%
+   Client  9: val_f1=72.0%  val_acc=92.2%
+   Client 10: val_f1=78.5%  val_acc=92.4%
+
+[Round  21 |   warmup] Acc=94.85%  F1-macro=85.20%
+    Adware              : F1=99.3%  P=99.8%  R=98.8%
+    Backdoor            : F1=74.2%  P=67.9%  R=81.7%
+    FileInfector        : F1=68.1%  P=69.6%  R=66.7%
+    PUA                 : F1=81.0%  P=87.9%  R=75.2%
+    Ransomware          : F1=91.6%  P=92.2%  R=91.0%
+    Riskware            : F1=97.2%  P=98.1%  R=96.4%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=96.8%  P=95.3%  R=98.4%
+    Trojan_Banker       : F1=49.0%  P=50.0%  R=48.0%
+    Trojan_Dropper      : F1=87.3%  P=88.2%  R=86.4%
+    Trojan_SMS          : F1=91.2%  P=91.7%  R=90.7%
+    Trojan_Spy          : F1=90.8%  P=88.9%  R=92.8%
+ Round time: 174.1s
+────────────────────────────────────────────────────────────
+ Round  22/70  [WARMUP]
+   Client  1: val_f1=77.2%  val_acc=94.7%
+   Client  2: val_f1=81.1%  val_acc=93.5%
+   Client  3: val_f1=83.0%  val_acc=93.8%
+   Client  4: val_f1=71.8%  val_acc=93.7%
+   Client  5: val_f1=78.1%  val_acc=92.5%
+   Client  6: val_f1=79.3%  val_acc=94.0%
+   Client  7: val_f1=59.5%  val_acc=91.5%
+   Client  8: val_f1=80.6%  val_acc=93.9%
+   Client  9: val_f1=77.1%  val_acc=94.1%
+   Client 10: val_f1=78.7%  val_acc=94.1%
+
+[Round  22 |   warmup] Acc=94.94%  F1-macro=85.37%
+    Adware              : F1=99.4%  P=99.8%  R=98.9%
+    Backdoor            : F1=73.7%  P=64.4%  R=86.2%
+    FileInfector        : F1=70.8%  P=70.8%  R=70.8%
+    PUA                 : F1=80.3%  P=88.5%  R=73.6%
+    Ransomware          : F1=92.2%  P=93.1%  R=91.3%
+    Riskware            : F1=97.2%  P=97.4%  R=97.0%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=97.5%  P=97.3%  R=97.8%
+    Trojan_Banker       : F1=48.1%  P=44.8%  R=52.0%
+    Trojan_Dropper      : F1=89.1%  P=89.1%  R=89.1%
+    Trojan_SMS          : F1=90.1%  P=93.0%  R=87.4%
+    Trojan_Spy          : F1=90.4%  P=90.0%  R=90.9%
+ Round time: 172.9s
+────────────────────────────────────────────────────────────
+ Round  23/70  [WARMUP]
+   Client  1: val_f1=81.4%  val_acc=95.6%
+   Client  2: val_f1=73.4%  val_acc=93.1%
+   Client  3: val_f1=78.0%  val_acc=92.5%
+   Client  4: val_f1=72.9%  val_acc=91.7%
+   Client  5: val_f1=77.1%  val_acc=92.5%
+   Client  6: val_f1=75.8%  val_acc=96.0%
+   Client  7: val_f1=66.0%  val_acc=93.9%
+   Client  8: val_f1=84.0%  val_acc=95.2%
+   Client  9: val_f1=79.1%  val_acc=95.0%
+   Client 10: val_f1=74.3%  val_acc=95.7%
+
+[Round  23 |   warmup] Acc=95.10%  F1-macro=85.09%
+    Adware              : F1=99.3%  P=99.7%  R=98.9%
+    Backdoor            : F1=74.1%  P=69.9%  R=78.9%
+    FileInfector        : F1=69.6%  P=72.7%  R=66.7%
+    PUA                 : F1=80.5%  P=85.6%  R=76.0%
+    Ransomware          : F1=92.0%  P=91.1%  R=92.9%
+    Riskware            : F1=97.7%  P=98.0%  R=97.4%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=97.5%  P=96.7%  R=98.3%
+    Trojan_Banker       : F1=44.4%  P=36.8%  R=56.0%
+    Trojan_Dropper      : F1=88.3%  P=89.5%  R=87.1%
+    Trojan_SMS          : F1=90.7%  P=93.6%  R=87.9%
+    Trojan_Spy          : F1=91.5%  P=92.6%  R=90.4%
+ Round time: 173.4s
+────────────────────────────────────────────────────────────
+ Round  24/70  [WARMUP]
+   Client  1: val_f1=82.3%  val_acc=96.6%
+   Client  2: val_f1=75.9%  val_acc=93.5%
+   Client  3: val_f1=87.7%  val_acc=94.2%
+   Client  4: val_f1=75.1%  val_acc=92.5%
+   Client  5: val_f1=78.6%  val_acc=91.9%
+   Client  6: val_f1=75.8%  val_acc=93.0%
+   Client  7: val_f1=59.3%  val_acc=91.7%
+   Client  8: val_f1=85.0%  val_acc=95.2%
+   Client  9: val_f1=76.1%  val_acc=93.8%
+   Client 10: val_f1=83.0%  val_acc=96.4%
+
+[Round  24 |   warmup] Acc=95.39%  F1-macro=85.26%
+    Adware              : F1=99.3%  P=99.6%  R=99.0%
+    Backdoor            : F1=76.8%  P=71.1%  R=83.5%
+    FileInfector        : F1=65.2%  P=68.2%  R=62.5%
+    PUA                 : F1=81.2%  P=85.1%  R=77.6%
+    Ransomware          : F1=92.9%  P=93.2%  R=92.6%
+    Riskware            : F1=97.9%  P=98.1%  R=97.6%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=97.8%  P=97.3%  R=98.3%
+    Trojan_Banker       : F1=45.2%  P=37.8%  R=56.0%
+    Trojan_Dropper      : F1=88.8%  P=91.4%  R=86.4%
+    Trojan_SMS          : F1=90.7%  P=93.1%  R=88.5%
+    Trojan_Spy          : F1=92.5%  P=92.8%  R=92.3%
+ Round time: 173.9s
+────────────────────────────────────────────────────────────
+ Round  25/70  [WARMUP]
+   Client  1: val_f1=80.4%  val_acc=96.3%
+   Client  2: val_f1=73.3%  val_acc=93.1%
+   Client  3: val_f1=87.4%  val_acc=95.6%
+   Client  4: val_f1=75.9%  val_acc=93.9%
+   Client  5: val_f1=75.9%  val_acc=91.9%
+   Client  6: val_f1=80.0%  val_acc=95.3%
+   Client  7: val_f1=74.2%  val_acc=95.7%
+   Client  8: val_f1=88.5%  val_acc=95.9%
+   Client  9: val_f1=80.4%  val_acc=94.4%
+   Client 10: val_f1=78.3%  val_acc=94.2%
+
+[Round  25 |   warmup] Acc=95.51%  F1-macro=86.34%
+    Adware              : F1=99.3%  P=99.8%  R=98.8%
+    Backdoor            : F1=78.3%  P=71.8%  R=86.2%
+    FileInfector        : F1=69.1%  P=61.3%  R=79.2%
+    PUA                 : F1=84.5%  P=88.6%  R=80.8%
+    Ransomware          : F1=93.1%  P=92.7%  R=93.5%
+    Riskware            : F1=97.6%  P=98.1%  R=97.1%
+    Scareware           : F1=94.3%  P=91.2%  R=97.6%
+    Trojan              : F1=97.6%  P=97.3%  R=98.0%
+    Trojan_Banker       : F1=49.0%  P=50.0%  R=48.0%
+    Trojan_Dropper      : F1=89.7%  P=90.9%  R=88.4%
+    Trojan_SMS          : F1=92.5%  P=93.8%  R=91.2%
+    Trojan_Spy          : F1=91.1%  P=90.9%  R=91.3%
+ Round time: 173.2s
+────────────────────────────────────────────────────────────
+ Round  26/70  [WARMUP]
+   Client  1: val_f1=81.3%  val_acc=96.6%
+   Client  2: val_f1=78.1%  val_acc=95.0%
+   Client  3: val_f1=86.4%  val_acc=96.5%
+   Client  4: val_f1=81.6%  val_acc=93.9%
+   Client  5: val_f1=78.9%  val_acc=92.5%
+   Client  6: val_f1=76.3%  val_acc=92.3%
+   Client  7: val_f1=67.0%  val_acc=92.1%
+   Client  8: val_f1=80.5%  val_acc=95.2%
+   Client  9: val_f1=77.4%  val_acc=92.2%
+   Client 10: val_f1=70.3%  val_acc=95.3%
+
+[Round  26 |   warmup] Acc=95.37%  F1-macro=85.99%
+    Adware              : F1=99.4%  P=99.7%  R=99.0%
+    Backdoor            : F1=78.7%  P=71.1%  R=88.1%
+    FileInfector        : F1=73.5%  P=72.0%  R=75.0%
+    PUA                 : F1=81.7%  P=85.2%  R=78.4%
+    Ransomware          : F1=92.9%  P=92.6%  R=93.2%
+    Riskware            : F1=97.7%  P=98.4%  R=97.0%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=98.0%  P=97.8%  R=98.1%
+    Trojan_Banker       : F1=45.6%  P=40.6%  R=52.0%
+    Trojan_Dropper      : F1=89.0%  P=87.0%  R=91.2%
+    Trojan_SMS          : F1=89.6%  P=94.5%  R=85.2%
+    Trojan_Spy          : F1=90.9%  P=90.5%  R=91.3%
+ Round time: 172.6s
+────────────────────────────────────────────────────────────
+ Round  27/70  [WARMUP]
+   Client  1: val_f1=78.1%  val_acc=96.6%
+   Client  2: val_f1=82.8%  val_acc=93.8%
+   Client  3: val_f1=81.6%  val_acc=93.4%
+   Client  4: val_f1=71.9%  val_acc=91.5%
+   Client  5: val_f1=75.1%  val_acc=90.8%
+   Client  6: val_f1=73.8%  val_acc=93.3%
+   Client  7: val_f1=72.1%  val_acc=95.1%
+   Client  8: val_f1=89.3%  val_acc=96.2%
+   Client  9: val_f1=62.0%  val_acc=82.0%
+   Client 10: val_f1=83.7%  val_acc=96.8%
+
+[Round  27 |   warmup] Acc=95.78%  F1-macro=86.38%
+    Adware              : F1=99.4%  P=99.3%  R=99.4%
+    Backdoor            : F1=79.5%  P=74.4%  R=85.3%
+    FileInfector        : F1=76.0%  P=73.1%  R=79.2%
+    PUA                 : F1=81.7%  P=85.2%  R=78.4%
+    Ransomware          : F1=93.4%  P=92.7%  R=94.2%
+    Riskware            : F1=97.9%  P=98.0%  R=97.9%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.3%  P=98.4%  R=98.1%
+    Trojan_Banker       : F1=40.7%  P=37.9%  R=44.0%
+    Trojan_Dropper      : F1=89.8%  P=89.8%  R=89.8%
+    Trojan_SMS          : F1=91.1%  P=92.6%  R=89.6%
+    Trojan_Spy          : F1=92.8%  P=95.9%  R=89.9%
+ Round time: 173.3s
+────────────────────────────────────────────────────────────
+ Round  28/70  [WARMUP]
+   Client  1: val_f1=81.1%  val_acc=96.3%
+   Client  2: val_f1=73.3%  val_acc=93.8%
+   Client  3: val_f1=83.5%  val_acc=95.1%
+   Client  4: val_f1=77.4%  val_acc=93.0%
+   Client  5: val_f1=73.5%  val_acc=90.8%
+   Client  6: val_f1=68.3%  val_acc=91.0%
+   Client  7: val_f1=72.5%  val_acc=95.5%
+   Client  8: val_f1=84.7%  val_acc=95.9%
+   Client  9: val_f1=81.9%  val_acc=95.0%
+   Client 10: val_f1=78.3%  val_acc=95.3%
+
+[Round  28 |   warmup] Acc=95.85%  F1-macro=86.63%
+    Adware              : F1=99.4%  P=99.8%  R=99.0%
+    Backdoor            : F1=79.0%  P=72.9%  R=86.2%
+    FileInfector        : F1=71.7%  P=65.5%  R=79.2%
+    PUA                 : F1=82.6%  P=85.5%  R=80.0%
+    Ransomware          : F1=93.6%  P=92.5%  R=94.8%
+    Riskware            : F1=98.1%  P=98.4%  R=97.8%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.3%  P=98.1%  R=98.4%
+    Trojan_Banker       : F1=48.0%  P=48.0%  R=48.0%
+    Trojan_Dropper      : F1=90.7%  P=92.3%  R=89.1%
+    Trojan_SMS          : F1=91.0%  P=93.6%  R=88.5%
+    Trojan_Spy          : F1=91.8%  P=91.8%  R=91.8%
+ Round time: 173.6s
+────────────────────────────────────────────────────────────
+ Round  29/70  [WARMUP]
+   Client  1: val_f1=84.9%  val_acc=96.3%
+   Client  2: val_f1=78.4%  val_acc=94.7%
+   Client  3: val_f1=91.4%  val_acc=96.5%
+   Client  4: val_f1=72.8%  val_acc=91.5%
+   Client  5: val_f1=82.0%  val_acc=94.2%
+   Client  6: val_f1=80.0%  val_acc=94.8%
+   Client  7: val_f1=70.0%  val_acc=95.3%
+   Client  8: val_f1=86.3%  val_acc=96.6%
+   Client  9: val_f1=77.1%  val_acc=91.9%
+   Client 10: val_f1=83.4%  val_acc=95.5%
+
+[Round  29 |   warmup] Acc=95.76%  F1-macro=86.86%
+    Adware              : F1=99.5%  P=100.0%  R=99.0%
+    Backdoor            : F1=78.5%  P=72.7%  R=85.3%
+    FileInfector        : F1=74.5%  P=70.4%  R=79.2%
+    PUA                 : F1=84.1%  P=85.8%  R=82.4%
+    Ransomware          : F1=93.6%  P=93.3%  R=93.9%
+    Riskware            : F1=97.7%  P=98.3%  R=97.1%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=98.1%  P=98.5%  R=97.8%
+    Trojan_Banker       : F1=46.4%  P=41.9%  R=52.0%
+    Trojan_Dropper      : F1=89.5%  P=86.6%  R=92.5%
+    Trojan_SMS          : F1=92.2%  P=93.8%  R=90.7%
+    Trojan_Spy          : F1=92.3%  P=92.3%  R=92.3%
+ Round time: 173.3s
+────────────────────────────────────────────────────────────
+ Round  30/70  [WARMUP]
+   Client  1: val_f1=77.5%  val_acc=96.9%
+   Client  2: val_f1=71.5%  val_acc=93.1%
+   Client  3: val_f1=81.5%  val_acc=94.2%
+   Client  4: val_f1=82.4%  val_acc=94.4%
+   Client  5: val_f1=74.7%  val_acc=91.3%
+   Client  6: val_f1=83.5%  val_acc=95.0%
+   Client  7: val_f1=76.2%  val_acc=97.4%
+   Client  8: val_f1=87.9%  val_acc=96.9%
+   Client  9: val_f1=78.6%  val_acc=94.1%
+   Client 10: val_f1=86.1%  val_acc=97.3%
+
+[Round  30 |   warmup] Acc=95.98%  F1-macro=87.13%
+    Adware              : F1=99.5%  P=99.9%  R=99.1%
+    Backdoor            : F1=81.7%  P=76.2%  R=88.1%
+    FileInfector        : F1=71.7%  P=65.5%  R=79.2%
+    PUA                 : F1=84.4%  P=89.3%  R=80.0%
+    Ransomware          : F1=94.0%  P=93.9%  R=94.2%
+    Riskware            : F1=97.9%  P=97.8%  R=98.1%
+    Scareware           : F1=94.3%  P=91.2%  R=97.6%
+    Trojan              : F1=98.1%  P=97.8%  R=98.5%
+    Trojan_Banker       : F1=48.3%  P=42.4%  R=56.0%
+    Trojan_Dropper      : F1=92.7%  P=95.0%  R=90.5%
+    Trojan_SMS          : F1=90.9%  P=94.6%  R=87.4%
+    Trojan_Spy          : F1=92.0%  P=93.1%  R=90.9%
+ Round time: 172.3s
+────────────────────────────────────────────────────────────
+ Round  31/70  [WARMUP]
+   Client  1: val_f1=69.9%  val_acc=92.8%
+   Client  2: val_f1=83.2%  val_acc=95.0%
+   Client  3: val_f1=87.6%  val_acc=97.3%
+   Client  4: val_f1=71.4%  val_acc=93.2%
+   Client  5: val_f1=80.2%  val_acc=93.6%
+   Client  6: val_f1=80.2%  val_acc=93.8%
+   Client  7: val_f1=61.4%  val_acc=88.3%
+   Client  8: val_f1=94.1%  val_acc=98.0%
+   Client  9: val_f1=84.0%  val_acc=96.3%
+   Client 10: val_f1=89.8%  val_acc=97.3%
+
+[Round  31 |   warmup] Acc=96.05%  F1-macro=87.23%
+    Adware              : F1=99.5%  P=100.0%  R=99.0%
+    Backdoor            : F1=81.4%  P=80.4%  R=82.6%
+    FileInfector        : F1=73.1%  P=67.9%  R=79.2%
+    PUA                 : F1=84.0%  P=84.0%  R=84.0%
+    Ransomware          : F1=93.8%  P=93.0%  R=94.5%
+    Riskware            : F1=98.2%  P=98.7%  R=97.8%
+    Scareware           : F1=94.4%  P=89.5%  R=100.0%
+    Trojan              : F1=98.3%  P=98.0%  R=98.6%
+    Trojan_Banker       : F1=50.0%  P=45.2%  R=56.0%
+    Trojan_Dropper      : F1=90.0%  P=91.5%  R=88.4%
+    Trojan_SMS          : F1=92.1%  P=94.3%  R=90.1%
+    Trojan_Spy          : F1=91.9%  P=91.4%  R=92.3%
+ Round time: 172.1s
+────────────────────────────────────────────────────────────
+ Round  32/70  [WARMUP]
+   Client  1: val_f1=81.4%  val_acc=96.6%
+   Client  2: val_f1=77.2%  val_acc=94.1%
+   Client  3: val_f1=88.4%  val_acc=94.7%
+   Client  4: val_f1=86.3%  val_acc=95.1%
+   Client  5: val_f1=79.7%  val_acc=93.6%
+   Client  6: val_f1=80.8%  val_acc=95.3%
+   Client  7: val_f1=79.8%  val_acc=97.4%
+   Client  8: val_f1=87.1%  val_acc=96.9%
+   Client  9: val_f1=71.8%  val_acc=91.3%
+   Client 10: val_f1=76.0%  val_acc=96.2%
+
+[Round  32 |   warmup] Acc=96.10%  F1-macro=87.45%
+    Adware              : F1=99.5%  P=99.9%  R=99.1%
+    Backdoor            : F1=81.7%  P=76.2%  R=88.1%
+    FileInfector        : F1=75.5%  P=69.0%  R=83.3%
+    PUA                 : F1=82.8%  P=86.8%  R=79.2%
+    Ransomware          : F1=93.7%  P=93.6%  R=93.9%
+    Riskware            : F1=98.1%  P=97.9%  R=98.2%
+    Scareware           : F1=94.3%  P=91.2%  R=97.6%
+    Trojan              : F1=98.3%  P=98.1%  R=98.5%
+    Trojan_Banker       : F1=50.0%  P=52.2%  R=48.0%
+    Trojan_Dropper      : F1=89.9%  P=89.3%  R=90.5%
+    Trojan_SMS          : F1=92.6%  P=95.9%  R=89.6%
+    Trojan_Spy          : F1=92.9%  P=94.1%  R=91.8%
+ Round time: 172.1s
+────────────────────────────────────────────────────────────
+ Round  33/70  [WARMUP]
+   Client  1: val_f1=82.7%  val_acc=96.3%
+   Client  2: val_f1=73.4%  val_acc=91.9%
+   Client  3: val_f1=82.6%  val_acc=95.1%
+   Client  4: val_f1=77.0%  val_acc=93.9%
+   Client  5: val_f1=77.7%  val_acc=93.6%
+   Client  6: val_f1=78.2%  val_acc=94.5%
+   Client  7: val_f1=75.4%  val_acc=96.4%
+   Client  8: val_f1=92.5%  val_acc=97.3%
+   Client  9: val_f1=81.5%  val_acc=95.3%
+   Client 10: val_f1=76.5%  val_acc=94.4%
+
+[Round  33 |   warmup] Acc=95.71%  F1-macro=86.77%
+    Adware              : F1=99.3%  P=99.4%  R=99.1%
+    Backdoor            : F1=79.0%  P=72.9%  R=86.2%
+    FileInfector        : F1=71.7%  P=65.5%  R=79.2%
+    PUA                 : F1=82.9%  P=82.5%  R=83.2%
+    Ransomware          : F1=93.5%  P=93.5%  R=93.5%
+    Riskware            : F1=97.6%  P=98.4%  R=96.8%
+    Scareware           : F1=95.9%  P=95.3%  R=96.5%
+    Trojan              : F1=98.1%  P=98.3%  R=98.0%
+    Trojan_Banker       : F1=48.9%  P=55.0%  R=44.0%
+    Trojan_Dropper      : F1=90.0%  P=88.2%  R=91.8%
+    Trojan_SMS          : F1=92.0%  P=92.3%  R=91.8%
+    Trojan_Spy          : F1=92.3%  P=92.3%  R=92.3%
+ Round time: 173.2s
+────────────────────────────────────────────────────────────
+ Round  34/70  [WARMUP]
+   Client  1: val_f1=73.9%  val_acc=94.7%
+   Client  2: val_f1=80.5%  val_acc=93.8%
+   Client  3: val_f1=88.9%  val_acc=95.6%
+   Client  4: val_f1=86.7%  val_acc=94.9%
+   Client  5: val_f1=80.6%  val_acc=94.8%
+   Client  6: val_f1=85.8%  val_acc=96.0%
+   Client  7: val_f1=70.0%  val_acc=96.0%
+   Client  8: val_f1=87.5%  val_acc=95.2%
+   Client  9: val_f1=81.0%  val_acc=94.7%
+   Client 10: val_f1=87.2%  val_acc=97.1%
+
+[Round  34 |   warmup] Acc=96.14%  F1-macro=87.38%
+    Adware              : F1=99.6%  P=100.0%  R=99.2%
+    Backdoor            : F1=81.9%  P=77.2%  R=87.2%
+    FileInfector        : F1=74.1%  P=66.7%  R=83.3%
+    PUA                 : F1=83.1%  P=90.6%  R=76.8%
+    Ransomware          : F1=93.8%  P=93.0%  R=94.5%
+    Riskware            : F1=98.1%  P=97.9%  R=98.2%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=98.5%  P=98.6%  R=98.4%
+    Trojan_Banker       : F1=48.1%  P=44.8%  R=52.0%
+    Trojan_Dropper      : F1=90.0%  P=88.2%  R=91.8%
+    Trojan_SMS          : F1=92.7%  P=94.8%  R=90.7%
+    Trojan_Spy          : F1=92.7%  P=93.6%  R=91.8%
+ Round time: 172.2s
+────────────────────────────────────────────────────────────
+ Round  35/70  [WARMUP]
+   Client  1: val_f1=78.7%  val_acc=95.6%
+   Client  2: val_f1=82.4%  val_acc=95.6%
+   Client  3: val_f1=89.3%  val_acc=96.0%
+   Client  4: val_f1=84.4%  val_acc=95.6%
+   Client  5: val_f1=80.5%  val_acc=94.2%
+   Client  6: val_f1=89.6%  val_acc=96.5%
+   Client  7: val_f1=73.8%  val_acc=97.0%
+   Client  8: val_f1=88.0%  val_acc=96.6%
+   Client  9: val_f1=80.3%  val_acc=93.5%
+   Client 10: val_f1=77.8%  val_acc=96.4%
+
+   [Transition] Running GA+PSO feature selection per client ...
+   Client 1: running GA+PSO feature selection ...
+      [GA+PSO] GA: 27 feats (fit=0.9978) → PSO: 31 feats (fit=0.9975)  [23.8s]
+   Client 1: 31/125 features selected (24.8%)
+   Client 2: running GA+PSO feature selection ...
+      [GA+PSO] GA: 25 feats (fit=0.9980) → PSO: 29 feats (fit=0.9977)  [25.5s]
+   Client 2: 29/125 features selected (23.2%)
+   Client 3: running GA+PSO feature selection ...
+      [GA+PSO] GA: 22 feats (fit=0.9982) → PSO: 28 feats (fit=0.9978)  [23.3s]
+   Client 3: 28/125 features selected (22.4%)
+   Client 4: running GA+PSO feature selection ...
+      [GA+PSO] GA: 27 feats (fit=0.9978) → PSO: 33 feats (fit=0.9974)  [27.3s]
+   Client 4: 33/125 features selected (26.4%)
+   Client 5: running GA+PSO feature selection ...
+      [GA+PSO] GA: 23 feats (fit=0.9982) → PSO: 27 feats (fit=0.9978)  [22.8s]
+   Client 5: 27/125 features selected (21.6%)
+   Client 6: running GA+PSO feature selection ...
+      [GA+PSO] GA: 28 feats (fit=0.9860) → PSO: 34 feats (fit=0.9973)  [26.1s]
+   Client 6: 34/125 features selected (27.2%)
+   Client 7: running GA+PSO feature selection ...
+      [GA+PSO] GA: 28 feats (fit=0.9978) → PSO: 32 feats (fit=0.9974)  [27.7s]
+   Client 7: 32/125 features selected (25.6%)
+   Client 8: running GA+PSO feature selection ...
+      [GA+PSO] GA: 24 feats (fit=0.9981) → PSO: 30 feats (fit=0.9976)  [25.1s]
+   Client 8: 30/125 features selected (24.0%)
+   Client 9: running GA+PSO feature selection ...
+      [GA+PSO] GA: 23 feats (fit=0.9982) → PSO: 25 feats (fit=0.9980)  [22.7s]
+   Client 9: 25/125 features selected (20.0%)
+   Client 10: running GA+PSO feature selection ...
+      [GA+PSO] GA: 24 feats (fit=0.9981) → PSO: 26 feats (fit=0.9979)  [28.6s]
+   Client 10: 26/125 features selected (20.8%)
+XGBoost importance plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa\no_aoa_xgb_importance.png
+C:\Users\Dspike\Documents\FL-AdroidMaLD\fl_main.py:146: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  plt.tight_layout()
+GA+PSO heatmap saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa\no_aoa_gapso_heatmap.png
+
+   [Feature Analysis] Per-client feature counts:
+      Client  1:  31/125 features selected  (fitness=0.9975)
+      Client  2:  29/125 features selected  (fitness=0.9977)
+      Client  3:  28/125 features selected  (fitness=0.9978)
+      Client  4:  33/125 features selected  (fitness=0.9974)
+      Client  5:  27/125 features selected  (fitness=0.9978)
+      Client  6:  34/125 features selected  (fitness=0.9973)
+      Client  7:  32/125 features selected  (fitness=0.9974)
+      Client  8:  30/125 features selected  (fitness=0.9976)
+      Client  9:  25/125 features selected  (fitness=0.9980)
+      Client 10:  26/125 features selected  (fitness=0.9979)
+   Consensus: 23.6% of features selected on average per client
+
+   [Transition] Building FedEL ensemble ...
+
+[Server] FedEL ensemble built with 10 heads.
+         meta_FC input dim: 120
+
+[Round  35 |   warmup] Acc=3.20%  F1-macro=0.58%
+    Adware              : F1=0.1%  P=0.2%  R=0.1% <-- minority
+    Backdoor            : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    FileInfector        : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    PUA                 : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Ransomware          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Riskware            : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Scareware           : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Trojan              : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Trojan_Banker       : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Trojan_Dropper      : F1=6.8%  P=3.5%  R=95.2% <-- minority
+    Trojan_SMS          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+    Trojan_Spy          : F1=0.0%  P=0.0%  R=0.0% <-- minority
+ Round time: 425.4s
+   [Random] Selected: clients [1, 2, 3, 4, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  36/70  [ENSEMBLE]
+   Client  1: val_f1=83.0%  val_acc=97.2%
+   Client  2: val_f1=85.0%  val_acc=94.7%
+   Client  3: val_f1=85.9%  val_acc=94.7%
+   Client  4: val_f1=73.1%  val_acc=94.7%
+   Client  6: val_f1=84.5%  val_acc=95.0%
+   Client  7: val_f1=82.1%  val_acc=97.0%
+   Client  9: val_f1=84.0%  val_acc=96.0%
+   Client 10: val_f1=88.7%  val_acc=96.8%
+
+[Round  36 | ensemble] Acc=95.53%  F1-macro=86.21%
+    Adware              : F1=99.1%  P=99.5%  R=98.6%
+    Backdoor            : F1=82.2%  P=81.8%  R=82.6%
+    FileInfector        : F1=67.8%  P=57.1%  R=83.3%
+    PUA                 : F1=81.5%  P=82.1%  R=80.8%
+    Ransomware          : F1=93.4%  P=93.5%  R=93.2%
+    Riskware            : F1=97.8%  P=96.8%  R=98.8%
+    Scareware           : F1=94.9%  P=92.2%  R=97.6%
+    Trojan              : F1=98.4%  P=99.1%  R=97.8%
+    Trojan_Banker       : F1=52.2%  P=57.1%  R=48.0%
+    Trojan_Dropper      : F1=87.5%  P=82.9%  R=92.5%
+    Trojan_SMS          : F1=90.5%  P=95.2%  R=86.3%
+    Trojan_Spy          : F1=89.4%  P=93.7%  R=85.6%
+ Round time: 51.6s
+   [Random] Selected: clients [1, 2, 3, 4, 5, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  37/70  [ENSEMBLE]
+   Client  1: val_f1=82.7%  val_acc=96.9%
+   Client  2: val_f1=78.6%  val_acc=94.7%
+   Client  3: val_f1=89.9%  val_acc=96.0%
+   Client  4: val_f1=79.7%  val_acc=94.9%
+   Client  5: val_f1=83.4%  val_acc=93.6%
+   Client  8: val_f1=84.0%  val_acc=96.2%
+   Client  9: val_f1=82.1%  val_acc=94.7%
+   Client 10: val_f1=89.1%  val_acc=97.1%
+
+[Round  37 | ensemble] Acc=95.44%  F1-macro=84.47%
+    Adware              : F1=99.4%  P=99.5%  R=99.2%
+    Backdoor            : F1=80.2%  P=75.6%  R=85.3%
+    FileInfector        : F1=66.7%  P=57.6%  R=79.2%
+    PUA                 : F1=81.8%  P=84.6%  R=79.2%
+    Ransomware          : F1=93.6%  P=93.3%  R=93.9%
+    Riskware            : F1=98.3%  P=98.2%  R=98.4%
+    Scareware           : F1=94.9%  P=92.2%  R=97.6%
+    Trojan              : F1=98.5%  P=99.4%  R=97.6%
+    Trojan_Banker       : F1=33.3%  P=25.5%  R=48.0%
+    Trojan_Dropper      : F1=89.6%  P=88.2%  R=91.2%
+    Trojan_SMS          : F1=86.1%  P=95.9%  R=78.0%
+    Trojan_Spy          : F1=91.3%  P=91.3%  R=91.3%
+ Round time: 44.7s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  38/70  [ENSEMBLE]
+   Client  1: val_f1=82.9%  val_acc=96.9%
+   Client  2: val_f1=88.9%  val_acc=95.6%
+   Client  3: val_f1=87.3%  val_acc=94.7%
+   Client  5: val_f1=76.8%  val_acc=92.5%
+   Client  6: val_f1=82.3%  val_acc=94.3%
+   Client  7: val_f1=81.2%  val_acc=97.2%
+   Client  9: val_f1=84.0%  val_acc=96.0%
+   Client 10: val_f1=87.0%  val_acc=97.5%
+
+[Round  38 | ensemble] Acc=95.55%  F1-macro=85.00%
+    Adware              : F1=99.3%  P=99.4%  R=99.2%
+    Backdoor            : F1=78.6%  P=73.6%  R=84.4%
+    FileInfector        : F1=66.7%  P=57.6%  R=79.2%
+    PUA                 : F1=81.6%  P=83.3%  R=80.0%
+    Ransomware          : F1=93.6%  P=93.3%  R=93.9%
+    Riskware            : F1=98.2%  P=98.6%  R=97.9%
+    Scareware           : F1=94.9%  P=92.2%  R=97.6%
+    Trojan              : F1=98.3%  P=98.9%  R=97.8%
+    Trojan_Banker       : F1=38.1%  P=31.6%  R=48.0%
+    Trojan_Dropper      : F1=89.8%  P=89.8%  R=89.8%
+    Trojan_SMS          : F1=88.2%  P=95.5%  R=81.9%
+    Trojan_Spy          : F1=92.7%  P=91.2%  R=94.2%
+ Round time: 47.5s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  39/70  [ENSEMBLE]
+   Client  1: val_f1=82.7%  val_acc=96.6%
+   Client  2: val_f1=78.2%  val_acc=94.7%
+   Client  3: val_f1=88.0%  val_acc=95.1%
+   Client  5: val_f1=78.4%  val_acc=94.2%
+   Client  6: val_f1=81.0%  val_acc=92.5%
+   Client  8: val_f1=85.5%  val_acc=96.2%
+   Client  9: val_f1=71.0%  val_acc=91.9%
+   Client 10: val_f1=91.2%  val_acc=97.8%
+
+[Round  39 | ensemble] Acc=95.64%  F1-macro=85.79%
+    Adware              : F1=99.4%  P=99.5%  R=99.2%
+    Backdoor            : F1=76.9%  P=69.9%  R=85.3%
+    FileInfector        : F1=65.5%  P=55.9%  R=79.2%
+    PUA                 : F1=82.0%  P=84.0%  R=80.0%
+    Ransomware          : F1=94.0%  P=94.5%  R=93.5%
+    Riskware            : F1=98.0%  P=98.5%  R=97.5%
+    Scareware           : F1=93.3%  P=89.2%  R=97.6%
+    Trojan              : F1=98.4%  P=99.1%  R=97.8%
+    Trojan_Banker       : F1=49.1%  P=43.8%  R=56.0%
+    Trojan_Dropper      : F1=89.6%  P=88.7%  R=90.5%
+    Trojan_SMS          : F1=91.1%  P=95.2%  R=87.4%
+    Trojan_Spy          : F1=92.3%  P=92.3%  R=92.3%
+ Round time: 44.0s
+   [Random] Selected: clients [1, 3, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  40/70  [ENSEMBLE]
+   Client  1: val_f1=83.0%  val_acc=96.3%
+   Client  3: val_f1=89.4%  val_acc=96.0%
+   Client  5: val_f1=80.6%  val_acc=94.2%
+   Client  6: val_f1=84.8%  val_acc=95.3%
+   Client  7: val_f1=77.8%  val_acc=96.8%
+   Client  8: val_f1=88.4%  val_acc=97.3%
+   Client  9: val_f1=81.0%  val_acc=94.4%
+   Client 10: val_f1=89.6%  val_acc=97.3%
+
+[Round  40 | ensemble] Acc=95.80%  F1-macro=85.64%
+    Adware              : F1=99.4%  P=99.4%  R=99.3%
+    Backdoor            : F1=77.7%  P=74.2%  R=81.7%
+    FileInfector        : F1=65.7%  P=51.2%  R=91.7%
+    PUA                 : F1=81.2%  P=85.1%  R=77.6%
+    Ransomware          : F1=94.1%  P=92.8%  R=95.5%
+    Riskware            : F1=98.2%  P=98.7%  R=97.6%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.6%  P=99.2%  R=98.0%
+    Trojan_Banker       : F1=42.6%  P=36.1%  R=52.0%
+    Trojan_Dropper      : F1=91.1%  P=91.7%  R=90.5%
+    Trojan_SMS          : F1=89.8%  P=92.4%  R=87.4%
+    Trojan_Spy          : F1=93.9%  P=95.1%  R=92.8%
+ Round time: 47.4s
+   [Random] Selected: clients [1, 2, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  41/70  [ENSEMBLE]
+   Client  1: val_f1=83.7%  val_acc=97.2%
+   Client  2: val_f1=79.0%  val_acc=94.1%
+   Client  5: val_f1=74.7%  val_acc=91.9%
+   Client  6: val_f1=81.4%  val_acc=93.8%
+   Client  7: val_f1=79.7%  val_acc=97.4%
+   Client  8: val_f1=91.4%  val_acc=96.9%
+   Client  9: val_f1=84.7%  val_acc=96.3%
+   Client 10: val_f1=85.1%  val_acc=95.7%
+
+[Round  41 | ensemble] Acc=95.67%  F1-macro=86.40%
+    Adware              : F1=99.2%  P=99.5%  R=98.9%
+    Backdoor            : F1=77.2%  P=70.5%  R=85.3%
+    FileInfector        : F1=67.9%  P=59.4%  R=79.2%
+    PUA                 : F1=80.7%  P=85.0%  R=76.8%
+    Ransomware          : F1=94.1%  P=93.6%  R=94.5%
+    Riskware            : F1=97.9%  P=98.4%  R=97.3%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.3%  P=99.1%  R=97.5%
+    Trojan_Banker       : F1=50.8%  P=44.1%  R=60.0%
+    Trojan_Dropper      : F1=90.2%  P=89.3%  R=91.2%
+    Trojan_SMS          : F1=92.4%  P=94.8%  R=90.1%
+    Trojan_Spy          : F1=92.1%  P=91.5%  R=92.8%
+ Round time: 49.1s
+   [Random] Selected: clients [1, 2, 4, 5, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  42/70  [ENSEMBLE]
+   Client  1: val_f1=77.1%  val_acc=96.6%
+   Client  2: val_f1=77.3%  val_acc=94.7%
+   Client  4: val_f1=87.4%  val_acc=95.6%
+   Client  5: val_f1=76.2%  val_acc=93.1%
+   Client  6: val_f1=82.8%  val_acc=94.0%
+   Client  7: val_f1=85.3%  val_acc=97.4%
+   Client  9: val_f1=81.7%  val_acc=95.0%
+   Client 10: val_f1=88.4%  val_acc=97.3%
+
+[Round  42 | ensemble] Acc=95.62%  F1-macro=85.69%
+    Adware              : F1=99.3%  P=99.3%  R=99.2%
+    Backdoor            : F1=77.2%  P=70.5%  R=85.3%
+    FileInfector        : F1=67.7%  P=55.3%  R=87.5%
+    PUA                 : F1=81.1%  P=83.2%  R=79.2%
+    Ransomware          : F1=93.8%  P=92.7%  R=94.8%
+    Riskware            : F1=98.1%  P=98.7%  R=97.5%
+    Scareware           : F1=94.9%  P=92.2%  R=97.6%
+    Trojan              : F1=98.6%  P=99.4%  R=97.8%
+    Trojan_Banker       : F1=45.6%  P=40.6%  R=52.0%
+    Trojan_Dropper      : F1=90.2%  P=89.9%  R=90.5%
+    Trojan_SMS          : F1=89.9%  P=95.1%  R=85.2%
+    Trojan_Spy          : F1=92.0%  P=92.3%  R=91.8%
+ Round time: 50.8s
+   [Random] Selected: clients [1, 3, 4, 5, 6, 7, 8, 10]
+────────────────────────────────────────────────────────────
+ Round  43/70  [ENSEMBLE]
+   Client  1: val_f1=77.6%  val_acc=96.3%
+   Client  3: val_f1=88.2%  val_acc=95.6%
+   Client  4: val_f1=76.0%  val_acc=94.9%
+   Client  5: val_f1=79.8%  val_acc=93.6%
+   Client  6: val_f1=82.9%  val_acc=94.5%
+   Client  7: val_f1=86.2%  val_acc=97.6%
+   Client  8: val_f1=86.6%  val_acc=97.3%
+   Client 10: val_f1=88.3%  val_acc=96.9%
+
+[Round  43 | ensemble] Acc=95.51%  F1-macro=85.46%
+    Adware              : F1=99.3%  P=99.4%  R=99.1%
+    Backdoor            : F1=76.5%  P=70.5%  R=83.5%
+    FileInfector        : F1=65.5%  P=55.9%  R=79.2%
+    PUA                 : F1=81.0%  P=82.0%  R=80.0%
+    Ransomware          : F1=93.9%  P=93.9%  R=93.9%
+    Riskware            : F1=97.9%  P=98.3%  R=97.5%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.4%  P=99.1%  R=97.6%
+    Trojan_Banker       : F1=45.2%  P=37.8%  R=56.0%
+    Trojan_Dropper      : F1=89.7%  P=87.7%  R=91.8%
+    Trojan_SMS          : F1=90.6%  P=94.1%  R=87.4%
+    Trojan_Spy          : F1=92.3%  P=94.9%  R=89.9%
+ Round time: 48.9s
+   [Random] Selected: clients [2, 3, 4, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  44/70  [ENSEMBLE]
+   Client  2: val_f1=79.4%  val_acc=95.0%
+   Client  3: val_f1=85.6%  val_acc=94.2%
+   Client  4: val_f1=73.6%  val_acc=95.6%
+   Client  6: val_f1=83.1%  val_acc=94.8%
+   Client  7: val_f1=79.8%  val_acc=96.8%
+   Client  8: val_f1=86.2%  val_acc=96.2%
+   Client  9: val_f1=81.1%  val_acc=95.3%
+   Client 10: val_f1=90.4%  val_acc=97.7%
+
+[Round  44 | ensemble] Acc=95.67%  F1-macro=86.02%
+    Adware              : F1=99.3%  P=99.6%  R=99.0%
+    Backdoor            : F1=76.1%  P=68.1%  R=86.2%
+    FileInfector        : F1=70.2%  P=60.6%  R=83.3%
+    PUA                 : F1=81.5%  P=85.8%  R=77.6%
+    Ransomware          : F1=93.8%  P=92.7%  R=94.8%
+    Riskware            : F1=98.1%  P=98.7%  R=97.5%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.5%  P=99.1%  R=97.9%
+    Trojan_Banker       : F1=46.4%  P=41.9%  R=52.0%
+    Trojan_Dropper      : F1=89.6%  P=88.7%  R=90.5%
+    Trojan_SMS          : F1=90.4%  P=95.7%  R=85.7%
+    Trojan_Spy          : F1=92.4%  P=91.5%  R=93.3%
+ Round time: 51.8s
+   [Random] Selected: clients [2, 3, 4, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  45/70  [ENSEMBLE]
+   Client  2: val_f1=84.2%  val_acc=94.4%
+   Client  3: val_f1=91.7%  val_acc=96.0%
+   Client  4: val_f1=71.2%  val_acc=94.4%
+   Client  6: val_f1=83.7%  val_acc=95.0%
+   Client  7: val_f1=80.1%  val_acc=97.8%
+   Client  8: val_f1=84.1%  val_acc=94.9%
+   Client  9: val_f1=86.2%  val_acc=96.9%
+   Client 10: val_f1=88.1%  val_acc=97.5%
+
+[Round  45 | ensemble] Acc=95.35%  F1-macro=85.61%
+    Adware              : F1=99.3%  P=99.6%  R=99.0%
+    Backdoor            : F1=75.0%  P=66.9%  R=85.3%
+    FileInfector        : F1=67.9%  P=59.4%  R=79.2%
+    PUA                 : F1=80.0%  P=80.0%  R=80.0%
+    Ransomware          : F1=93.2%  P=92.9%  R=93.5%
+    Riskware            : F1=97.5%  P=98.6%  R=96.5%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.5%  P=99.0%  R=98.0%
+    Trojan_Banker       : F1=47.5%  P=41.2%  R=56.0%
+    Trojan_Dropper      : F1=88.9%  P=88.0%  R=89.8%
+    Trojan_SMS          : F1=91.5%  P=94.7%  R=88.5%
+    Trojan_Spy          : F1=92.0%  P=92.3%  R=91.8%
+ Round time: 51.2s
+   [Random] Selected: clients [1, 2, 3, 4, 5, 6, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  46/70  [ENSEMBLE]
+   Client  1: val_f1=81.2%  val_acc=96.0%
+   Client  2: val_f1=81.8%  val_acc=93.8%
+   Client  3: val_f1=89.4%  val_acc=94.2%
+   Client  4: val_f1=84.2%  val_acc=94.9%
+   Client  5: val_f1=82.7%  val_acc=93.6%
+   Client  6: val_f1=85.0%  val_acc=94.8%
+   Client  8: val_f1=80.9%  val_acc=96.2%
+   Client  9: val_f1=85.7%  val_acc=96.6%
+
+[Round  46 | ensemble] Acc=95.42%  F1-macro=85.57%
+    Adware              : F1=99.2%  P=99.2%  R=99.2%
+    Backdoor            : F1=76.7%  P=69.1%  R=86.2%
+    FileInfector        : F1=66.7%  P=57.6%  R=79.2%
+    PUA                 : F1=81.7%  P=85.2%  R=78.4%
+    Ransomware          : F1=93.2%  P=91.8%  R=94.5%
+    Riskware            : F1=97.8%  P=98.7%  R=97.0%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=98.2%  P=99.2%  R=97.3%
+    Trojan_Banker       : F1=45.9%  P=38.9%  R=56.0%
+    Trojan_Dropper      : F1=90.1%  P=90.4%  R=89.8%
+    Trojan_SMS          : F1=90.8%  P=95.7%  R=86.3%
+    Trojan_Spy          : F1=91.7%  P=90.6%  R=92.8%
+ Round time: 41.7s
+   [Random] Selected: clients [2, 3, 4, 5, 6, 7, 8, 10]
+────────────────────────────────────────────────────────────
+ Round  47/70  [ENSEMBLE]
+   Client  2: val_f1=74.1%  val_acc=92.5%
+   Client  3: val_f1=82.7%  val_acc=92.9%
+   Client  4: val_f1=86.3%  val_acc=95.6%
+   Client  5: val_f1=85.1%  val_acc=94.2%
+   Client  6: val_f1=81.8%  val_acc=94.0%
+   Client  7: val_f1=75.0%  val_acc=96.2%
+   Client  8: val_f1=84.7%  val_acc=96.2%
+   Client 10: val_f1=91.5%  val_acc=97.5%
+
+[Round  47 | ensemble] Acc=95.32%  F1-macro=85.13%
+    Adware              : F1=99.3%  P=99.7%  R=98.9%
+    Backdoor            : F1=74.9%  P=66.2%  R=86.2%
+    FileInfector        : F1=65.5%  P=55.9%  R=79.2%
+    PUA                 : F1=81.7%  P=85.2%  R=78.4%
+    Ransomware          : F1=92.5%  P=91.2%  R=93.9%
+    Riskware            : F1=97.8%  P=98.6%  R=97.1%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=98.4%  P=99.4%  R=97.5%
+    Trojan_Banker       : F1=44.4%  P=36.8%  R=56.0%
+    Trojan_Dropper      : F1=89.2%  P=88.6%  R=89.8%
+    Trojan_SMS          : F1=89.9%  P=95.1%  R=85.2%
+    Trojan_Spy          : F1=93.0%  P=93.2%  R=92.8%
+ Round time: 49.0s
+   [Random] Selected: clients [1, 2, 3, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  48/70  [ENSEMBLE]
+   Client  1: val_f1=82.4%  val_acc=96.6%
+   Client  2: val_f1=78.6%  val_acc=94.7%
+   Client  3: val_f1=91.7%  val_acc=96.0%
+   Client  6: val_f1=84.5%  val_acc=95.0%
+   Client  7: val_f1=78.7%  val_acc=97.0%
+   Client  8: val_f1=89.0%  val_acc=96.9%
+   Client  9: val_f1=84.7%  val_acc=96.3%
+   Client 10: val_f1=88.1%  val_acc=97.1%
+
+[Round  48 | ensemble] Acc=95.60%  F1-macro=85.76%
+    Adware              : F1=99.3%  P=99.3%  R=99.2%
+    Backdoor            : F1=78.0%  P=71.2%  R=86.2%
+    FileInfector        : F1=64.3%  P=56.2%  R=75.0%
+    PUA                 : F1=80.0%  P=83.5%  R=76.8%
+    Ransomware          : F1=94.1%  P=93.6%  R=94.5%
+    Riskware            : F1=97.9%  P=98.4%  R=97.5%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.3%  P=99.1%  R=97.5%
+    Trojan_Banker       : F1=48.4%  P=40.5%  R=60.0%
+    Trojan_Dropper      : F1=89.6%  P=88.7%  R=90.5%
+    Trojan_SMS          : F1=91.1%  P=95.2%  R=87.4%
+    Trojan_Spy          : F1=92.8%  P=93.2%  R=92.3%
+ Round time: 49.5s
+   [Random] Selected: clients [1, 2, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  49/70  [ENSEMBLE]
+   Client  1: val_f1=81.1%  val_acc=96.3%
+   Client  2: val_f1=77.8%  val_acc=93.5%
+   Client  5: val_f1=75.8%  val_acc=93.1%
+   Client  6: val_f1=83.8%  val_acc=94.8%
+   Client  7: val_f1=77.1%  val_acc=96.0%
+   Client  8: val_f1=87.8%  val_acc=95.2%
+   Client  9: val_f1=84.6%  val_acc=96.3%
+   Client 10: val_f1=90.1%  val_acc=97.5%
+
+[Round  49 | ensemble] Acc=95.53%  F1-macro=86.01%
+    Adware              : F1=99.2%  P=99.7%  R=98.7%
+    Backdoor            : F1=76.8%  P=68.1%  R=88.1%
+    FileInfector        : F1=67.9%  P=59.4%  R=79.2%
+    PUA                 : F1=81.8%  P=84.6%  R=79.2%
+    Ransomware          : F1=93.9%  P=93.9%  R=93.9%
+    Riskware            : F1=97.7%  P=98.4%  R=96.9%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.5%  P=98.9%  R=98.1%
+    Trojan_Banker       : F1=47.5%  P=41.2%  R=56.0%
+    Trojan_Dropper      : F1=90.2%  P=89.3%  R=91.2%
+    Trojan_SMS          : F1=90.8%  P=95.2%  R=86.8%
+    Trojan_Spy          : F1=91.9%  P=91.0%  R=92.8%
+ Round time: 48.6s
+   [Random] Selected: clients [1, 2, 4, 5, 6, 7, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  50/70  [ENSEMBLE]
+   Client  1: val_f1=83.6%  val_acc=97.2%
+   Client  2: val_f1=84.9%  val_acc=94.7%
+   Client  4: val_f1=78.8%  val_acc=94.4%
+   Client  5: val_f1=81.9%  val_acc=94.2%
+   Client  6: val_f1=82.6%  val_acc=93.5%
+   Client  7: val_f1=79.1%  val_acc=96.2%
+   Client  8: val_f1=84.8%  val_acc=94.9%
+   Client  9: val_f1=87.5%  val_acc=97.2%
+
+[Round  50 | ensemble] Acc=95.35%  F1-macro=85.62%
+    Adware              : F1=99.4%  P=99.7%  R=99.1%
+    Backdoor            : F1=74.7%  P=66.4%  R=85.3%
+    FileInfector        : F1=70.2%  P=60.6%  R=83.3%
+    PUA                 : F1=80.2%  P=81.1%  R=79.2%
+    Ransomware          : F1=93.8%  P=93.0%  R=94.5%
+    Riskware            : F1=97.6%  P=98.8%  R=96.4%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.5%  P=99.0%  R=98.0%
+    Trojan_Banker       : F1=45.9%  P=38.9%  R=56.0%
+    Trojan_Dropper      : F1=89.7%  P=90.3%  R=89.1%
+    Trojan_SMS          : F1=90.4%  P=95.7%  R=85.7%
+    Trojan_Spy          : F1=91.1%  P=89.0%  R=93.3%
+ Round time: 46.7s
+   [Random] Selected: clients [1, 2, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  51/70  [ENSEMBLE]
+   Client  1: val_f1=77.4%  val_acc=96.0%
+   Client  2: val_f1=75.3%  val_acc=93.5%
+   Client  5: val_f1=82.2%  val_acc=91.9%
+   Client  6: val_f1=83.4%  val_acc=94.5%
+   Client  7: val_f1=83.9%  val_acc=98.4%
+   Client  8: val_f1=87.9%  val_acc=95.9%
+   Client  9: val_f1=85.7%  val_acc=96.6%
+   Client 10: val_f1=89.8%  val_acc=97.5%
+
+[Round  51 | ensemble] Acc=95.69%  F1-macro=86.39%
+    Adware              : F1=99.3%  P=99.5%  R=99.0%
+    Backdoor            : F1=78.2%  P=72.1%  R=85.3%
+    FileInfector        : F1=69.8%  P=56.4%  R=91.7%
+    PUA                 : F1=80.8%  P=82.5%  R=79.2%
+    Ransomware          : F1=93.7%  P=93.9%  R=93.5%
+    Riskware            : F1=97.9%  P=98.7%  R=97.2%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=98.5%  P=98.9%  R=98.1%
+    Trojan_Banker       : F1=49.1%  P=43.8%  R=56.0%
+    Trojan_Dropper      : F1=89.9%  P=89.3%  R=90.5%
+    Trojan_SMS          : F1=91.7%  P=95.3%  R=88.5%
+    Trojan_Spy          : F1=92.3%  P=92.3%  R=92.3%
+ Round time: 49.0s
+   [Random] Selected: clients [1, 2, 3, 4, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  52/70  [ENSEMBLE]
+   Client  1: val_f1=81.4%  val_acc=96.3%
+   Client  2: val_f1=85.2%  val_acc=95.0%
+   Client  3: val_f1=88.8%  val_acc=95.6%
+   Client  4: val_f1=86.3%  val_acc=95.6%
+   Client  7: val_f1=80.0%  val_acc=97.2%
+   Client  8: val_f1=89.8%  val_acc=95.9%
+   Client  9: val_f1=85.2%  val_acc=96.6%
+   Client 10: val_f1=89.6%  val_acc=97.8%
+
+[Round  52 | ensemble] Acc=95.62%  F1-macro=86.24%
+    Adware              : F1=99.2%  P=99.1%  R=99.3%
+    Backdoor            : F1=79.3%  P=74.8%  R=84.4%
+    FileInfector        : F1=66.7%  P=55.6%  R=83.3%
+    PUA                 : F1=82.2%  P=85.3%  R=79.2%
+    Ransomware          : F1=93.5%  P=92.2%  R=94.8%
+    Riskware            : F1=97.9%  P=98.7%  R=97.2%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.3%  P=99.1%  R=97.5%
+    Trojan_Banker       : F1=50.0%  P=42.9%  R=60.0%
+    Trojan_Dropper      : F1=90.1%  P=90.4%  R=89.8%
+    Trojan_SMS          : F1=91.1%  P=95.8%  R=86.8%
+    Trojan_Spy          : F1=91.3%  P=89.4%  R=93.3%
+ Round time: 49.8s
+   [Random] Selected: clients [2, 4, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  53/70  [ENSEMBLE]
+   Client  2: val_f1=80.6%  val_acc=95.3%
+   Client  4: val_f1=82.2%  val_acc=95.4%
+   Client  5: val_f1=76.6%  val_acc=92.5%
+   Client  6: val_f1=80.7%  val_acc=93.8%
+   Client  7: val_f1=80.7%  val_acc=98.0%
+   Client  8: val_f1=88.5%  val_acc=96.6%
+   Client  9: val_f1=83.8%  val_acc=95.7%
+   Client 10: val_f1=86.6%  val_acc=96.8%
+
+[Round  53 | ensemble] Acc=95.60%  F1-macro=85.62%
+    Adware              : F1=99.4%  P=99.6%  R=99.2%
+    Backdoor            : F1=79.1%  P=73.8%  R=85.3%
+    FileInfector        : F1=65.5%  P=55.9%  R=79.2%
+    PUA                 : F1=81.0%  P=83.8%  R=78.4%
+    Ransomware          : F1=94.2%  P=94.2%  R=94.2%
+    Riskware            : F1=97.9%  P=98.6%  R=97.2%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=98.3%  P=98.9%  R=97.8%
+    Trojan_Banker       : F1=44.4%  P=36.8%  R=56.0%
+    Trojan_Dropper      : F1=89.9%  P=88.7%  R=91.2%
+    Trojan_SMS          : F1=90.2%  P=94.6%  R=86.3%
+    Trojan_Spy          : F1=91.9%  P=90.7%  R=93.3%
+ Round time: 50.5s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  54/70  [ENSEMBLE]
+   Client  1: val_f1=81.7%  val_acc=96.6%
+   Client  2: val_f1=76.0%  val_acc=93.5%
+   Client  3: val_f1=88.7%  val_acc=93.8%
+   Client  5: val_f1=75.0%  val_acc=92.5%
+   Client  6: val_f1=85.6%  val_acc=95.3%
+   Client  8: val_f1=87.8%  val_acc=96.6%
+   Client  9: val_f1=85.4%  val_acc=96.6%
+   Client 10: val_f1=90.6%  val_acc=97.8%
+
+[Round  54 | ensemble] Acc=95.48%  F1-macro=85.82%
+    Adware              : F1=99.5%  P=99.6%  R=99.3%
+    Backdoor            : F1=78.2%  P=70.9%  R=87.2%
+    FileInfector        : F1=65.5%  P=55.9%  R=79.2%
+    PUA                 : F1=81.1%  P=83.2%  R=79.2%
+    Ransomware          : F1=93.9%  P=93.9%  R=93.9%
+    Riskware            : F1=97.6%  P=98.9%  R=96.2%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.4%  P=99.0%  R=97.8%
+    Trojan_Banker       : F1=48.3%  P=42.4%  R=56.0%
+    Trojan_Dropper      : F1=89.3%  P=88.1%  R=90.5%
+    Trojan_SMS          : F1=91.3%  P=93.6%  R=89.0%
+    Trojan_Spy          : F1=90.9%  P=88.2%  R=93.8%
+ Round time: 44.0s
+   [Random] Selected: clients [1, 2, 3, 4, 6, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  55/70  [ENSEMBLE]
+   Client  1: val_f1=82.9%  val_acc=96.9%
+   Client  2: val_f1=77.7%  val_acc=94.1%
+   Client  3: val_f1=86.0%  val_acc=95.1%
+   Client  4: val_f1=83.0%  val_acc=95.9%
+   Client  6: val_f1=81.2%  val_acc=93.0%
+   Client  8: val_f1=88.6%  val_acc=96.6%
+   Client  9: val_f1=84.4%  val_acc=96.0%
+   Client 10: val_f1=91.1%  val_acc=97.7%
+
+[Round  55 | ensemble] Acc=95.19%  F1-macro=85.25%
+    Adware              : F1=99.1%  P=99.2%  R=99.0%
+    Backdoor            : F1=75.2%  P=66.7%  R=86.2%
+    FileInfector        : F1=64.4%  P=54.3%  R=79.2%
+    PUA                 : F1=80.7%  P=85.0%  R=76.8%
+    Ransomware          : F1=93.6%  P=93.0%  R=94.2%
+    Riskware            : F1=97.6%  P=98.8%  R=96.5%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=98.1%  P=99.2%  R=96.9%
+    Trojan_Banker       : F1=48.3%  P=42.4%  R=56.0%
+    Trojan_Dropper      : F1=88.5%  P=85.4%  R=91.8%
+    Trojan_SMS          : F1=90.5%  P=94.6%  R=86.8%
+    Trojan_Spy          : F1=91.5%  P=89.8%  R=93.3%
+ Round time: 47.9s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 7, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  56/70  [ENSEMBLE]
+   Client  1: val_f1=78.2%  val_acc=96.9%
+   Client  2: val_f1=82.0%  val_acc=93.8%
+   Client  3: val_f1=87.3%  val_acc=94.2%
+   Client  5: val_f1=83.1%  val_acc=94.2%
+   Client  6: val_f1=82.8%  val_acc=93.8%
+   Client  7: val_f1=77.1%  val_acc=96.2%
+   Client  8: val_f1=79.7%  val_acc=95.9%
+   Client  9: val_f1=82.8%  val_acc=96.0%
+
+[Round  56 | ensemble] Acc=95.21%  F1-macro=85.37%
+    Adware              : F1=99.4%  P=99.5%  R=99.3%
+    Backdoor            : F1=76.5%  P=69.4%  R=85.3%
+    FileInfector        : F1=71.7%  P=65.5%  R=79.2%
+    PUA                 : F1=80.2%  P=82.9%  R=77.6%
+    Ransomware          : F1=93.8%  P=92.7%  R=94.8%
+    Riskware            : F1=97.7%  P=98.8%  R=96.6%
+    Scareware           : F1=94.4%  P=89.5%  R=100.0%
+    Trojan              : F1=98.0%  P=98.6%  R=97.4%
+    Trojan_Banker       : F1=43.5%  P=34.1%  R=60.0%
+    Trojan_Dropper      : F1=90.5%  P=90.5%  R=90.5%
+    Trojan_SMS          : F1=88.2%  P=95.5%  R=81.9%
+    Trojan_Spy          : F1=90.6%  P=88.5%  R=92.8%
+ Round time: 43.5s
+   [Random] Selected: clients [1, 3, 4, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  57/70  [ENSEMBLE]
+   Client  1: val_f1=83.7%  val_acc=97.2%
+   Client  3: val_f1=86.6%  val_acc=94.2%
+   Client  4: val_f1=86.8%  val_acc=95.9%
+   Client  6: val_f1=87.6%  val_acc=96.0%
+   Client  7: val_f1=81.4%  val_acc=97.4%
+   Client  8: val_f1=89.2%  val_acc=96.9%
+   Client  9: val_f1=86.2%  val_acc=96.6%
+   Client 10: val_f1=88.5%  val_acc=97.3%
+
+[Round  57 | ensemble] Acc=95.48%  F1-macro=86.23%
+    Adware              : F1=99.2%  P=99.3%  R=99.1%
+    Backdoor            : F1=77.9%  P=70.4%  R=87.2%
+    FileInfector        : F1=71.4%  P=62.5%  R=83.3%
+    PUA                 : F1=80.5%  P=81.8%  R=79.2%
+    Ransomware          : F1=94.1%  P=93.3%  R=94.8%
+    Riskware            : F1=97.7%  P=98.6%  R=96.8%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.2%  P=99.1%  R=97.3%
+    Trojan_Banker       : F1=47.5%  P=41.2%  R=56.0%
+    Trojan_Dropper      : F1=90.8%  P=90.5%  R=91.2%
+    Trojan_SMS          : F1=91.1%  P=95.8%  R=86.8%
+    Trojan_Spy          : F1=91.1%  P=89.0%  R=93.3%
+ Round time: 51.1s
+   [Random] Selected: clients [1, 3, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  58/70  [ENSEMBLE]
+   Client  1: val_f1=82.2%  val_acc=96.6%
+   Client  3: val_f1=81.7%  val_acc=92.9%
+   Client  5: val_f1=77.6%  val_acc=93.1%
+   Client  6: val_f1=83.9%  val_acc=94.8%
+   Client  7: val_f1=80.0%  val_acc=97.4%
+   Client  8: val_f1=88.2%  val_acc=97.3%
+   Client  9: val_f1=83.1%  val_acc=96.0%
+   Client 10: val_f1=92.2%  val_acc=98.0%
+
+[Round  58 | ensemble] Acc=95.44%  F1-macro=85.93%
+    Adware              : F1=99.2%  P=99.5%  R=98.9%
+    Backdoor            : F1=76.3%  P=69.7%  R=84.4%
+    FileInfector        : F1=70.2%  P=60.6%  R=83.3%
+    PUA                 : F1=81.2%  P=85.1%  R=77.6%
+    Ransomware          : F1=94.1%  P=93.3%  R=94.8%
+    Riskware            : F1=97.6%  P=98.5%  R=96.8%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.5%  P=99.2%  R=97.8%
+    Trojan_Banker       : F1=46.7%  P=40.0%  R=56.0%
+    Trojan_Dropper      : F1=90.5%  P=90.5%  R=90.5%
+    Trojan_SMS          : F1=91.1%  P=95.2%  R=87.4%
+    Trojan_Spy          : F1=89.8%  P=86.6%  R=93.3%
+ Round time: 47.3s
+   [Random] Selected: clients [1, 2, 3, 4, 5, 6, 7, 8]
+────────────────────────────────────────────────────────────
+ Round  59/70  [ENSEMBLE]
+   Client  1: val_f1=83.9%  val_acc=97.2%
+   Client  2: val_f1=78.1%  val_acc=95.0%
+   Client  3: val_f1=86.9%  val_acc=92.9%
+   Client  4: val_f1=90.2%  val_acc=96.1%
+   Client  5: val_f1=76.8%  val_acc=92.5%
+   Client  6: val_f1=79.4%  val_acc=93.3%
+   Client  7: val_f1=79.7%  val_acc=97.4%
+   Client  8: val_f1=90.0%  val_acc=95.6%
+
+[Round  59 | ensemble] Acc=95.64%  F1-macro=86.42%
+    Adware              : F1=99.3%  P=99.4%  R=99.2%
+    Backdoor            : F1=82.1%  P=80.0%  R=84.4%
+    FileInfector        : F1=70.2%  P=60.6%  R=83.3%
+    PUA                 : F1=81.8%  P=84.6%  R=79.2%
+    Ransomware          : F1=94.0%  P=94.8%  R=93.2%
+    Riskware            : F1=97.8%  P=98.8%  R=96.8%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=98.4%  P=98.5%  R=98.3%
+    Trojan_Banker       : F1=47.5%  P=41.2%  R=56.0%
+    Trojan_Dropper      : F1=88.7%  P=86.5%  R=91.2%
+    Trojan_SMS          : F1=92.1%  P=94.3%  R=90.1%
+    Trojan_Spy          : F1=89.1%  P=85.8%  R=92.8%
+ Round time: 45.2s
+   [Random] Selected: clients [1, 3, 4, 5, 6, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  60/70  [ENSEMBLE]
+   Client  1: val_f1=74.7%  val_acc=95.3%
+   Client  3: val_f1=85.8%  val_acc=94.7%
+   Client  4: val_f1=82.7%  val_acc=94.9%
+   Client  5: val_f1=85.2%  val_acc=94.8%
+   Client  6: val_f1=80.0%  val_acc=91.8%
+   Client  8: val_f1=85.7%  val_acc=96.6%
+   Client  9: val_f1=84.5%  val_acc=96.3%
+   Client 10: val_f1=90.3%  val_acc=97.5%
+
+[Round  60 | ensemble] Acc=95.35%  F1-macro=86.03%
+    Adware              : F1=99.4%  P=99.9%  R=98.9%
+    Backdoor            : F1=80.0%  P=74.6%  R=86.2%
+    FileInfector        : F1=71.4%  P=62.5%  R=83.3%
+    PUA                 : F1=80.5%  P=83.6%  R=77.6%
+    Ransomware          : F1=93.5%  P=92.4%  R=94.5%
+    Riskware            : F1=97.4%  P=98.6%  R=96.2%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=98.1%  P=98.3%  R=98.0%
+    Trojan_Banker       : F1=45.9%  P=38.9%  R=56.0%
+    Trojan_Dropper      : F1=90.8%  P=91.1%  R=90.5%
+    Trojan_SMS          : F1=91.1%  P=95.2%  R=87.4%
+    Trojan_Spy          : F1=88.8%  P=84.7%  R=93.3%
+ Round time: 45.7s
+   [Random] Selected: clients [2, 3, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  61/70  [ENSEMBLE]
+   Client  2: val_f1=83.4%  val_acc=94.7%
+   Client  3: val_f1=85.9%  val_acc=93.4%
+   Client  5: val_f1=77.8%  val_acc=92.5%
+   Client  6: val_f1=82.8%  val_acc=94.5%
+   Client  7: val_f1=84.3%  val_acc=97.8%
+   Client  8: val_f1=78.6%  val_acc=93.5%
+   Client  9: val_f1=84.9%  val_acc=96.3%
+   Client 10: val_f1=88.4%  val_acc=97.7%
+
+[Round  61 | ensemble] Acc=95.55%  F1-macro=86.21%
+    Adware              : F1=99.5%  P=99.9%  R=99.0%
+    Backdoor            : F1=78.7%  P=72.3%  R=86.2%
+    FileInfector        : F1=67.8%  P=57.1%  R=83.3%
+    PUA                 : F1=82.3%  P=84.7%  R=80.0%
+    Ransomware          : F1=93.6%  P=92.5%  R=94.8%
+    Riskware            : F1=97.7%  P=98.9%  R=96.5%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.3%  P=98.5%  R=98.0%
+    Trojan_Banker       : F1=49.1%  P=43.8%  R=56.0%
+    Trojan_Dropper      : F1=89.7%  P=90.3%  R=89.1%
+    Trojan_SMS          : F1=91.4%  P=95.2%  R=87.9%
+    Trojan_Spy          : F1=90.5%  P=87.1%  R=94.2%
+ Round time: 47.3s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  62/70  [ENSEMBLE]
+   Client  1: val_f1=81.7%  val_acc=97.2%
+   Client  2: val_f1=81.8%  val_acc=94.4%
+   Client  3: val_f1=87.6%  val_acc=94.7%
+   Client  5: val_f1=74.6%  val_acc=93.1%
+   Client  6: val_f1=84.2%  val_acc=94.8%
+   Client  7: val_f1=77.0%  val_acc=96.8%
+   Client  9: val_f1=81.0%  val_acc=95.0%
+   Client 10: val_f1=90.5%  val_acc=97.8%
+
+[Round  62 | ensemble] Acc=95.51%  F1-macro=86.07%
+    Adware              : F1=99.4%  P=99.5%  R=99.3%
+    Backdoor            : F1=78.2%  P=72.1%  R=85.3%
+    FileInfector        : F1=67.9%  P=59.4%  R=79.2%
+    PUA                 : F1=78.9%  P=80.2%  R=77.6%
+    Ransomware          : F1=94.0%  P=95.0%  R=92.9%
+    Riskware            : F1=97.6%  P=98.6%  R=96.5%
+    Scareware           : F1=96.5%  P=95.4%  R=97.6%
+    Trojan              : F1=98.4%  P=98.7%  R=98.0%
+    Trojan_Banker       : F1=50.0%  P=45.2%  R=56.0%
+    Trojan_Dropper      : F1=89.3%  P=87.6%  R=91.2%
+    Trojan_SMS          : F1=92.1%  P=94.3%  R=90.1%
+    Trojan_Spy          : F1=90.7%  P=87.8%  R=93.8%
+ Round time: 47.7s
+   [Random] Selected: clients [1, 3, 4, 5, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  63/70  [ENSEMBLE]
+   Client  1: val_f1=82.6%  val_acc=96.9%
+   Client  3: val_f1=91.4%  val_acc=95.1%
+   Client  4: val_f1=84.3%  val_acc=95.1%
+   Client  5: val_f1=80.6%  val_acc=93.6%
+   Client  7: val_f1=81.5%  val_acc=95.7%
+   Client  8: val_f1=91.8%  val_acc=96.9%
+   Client  9: val_f1=85.2%  val_acc=96.6%
+   Client 10: val_f1=90.8%  val_acc=97.7%
+
+[Round  63 | ensemble] Acc=95.51%  F1-macro=86.21%
+    Adware              : F1=99.1%  P=99.4%  R=98.8%
+    Backdoor            : F1=79.1%  P=73.8%  R=85.3%
+    FileInfector        : F1=69.0%  P=58.8%  R=83.3%
+    PUA                 : F1=81.0%  P=83.8%  R=78.4%
+    Ransomware          : F1=94.1%  P=93.6%  R=94.5%
+    Riskware            : F1=97.6%  P=98.1%  R=97.1%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.2%  P=99.1%  R=97.3%
+    Trojan_Banker       : F1=48.3%  P=42.4%  R=56.0%
+    Trojan_Dropper      : F1=89.9%  P=88.7%  R=91.2%
+    Trojan_SMS          : F1=91.8%  P=94.7%  R=89.0%
+    Trojan_Spy          : F1=91.0%  P=89.4%  R=92.8%
+ Round time: 48.7s
+   [Random] Selected: clients [2, 3, 4, 5, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  64/70  [ENSEMBLE]
+   Client  2: val_f1=86.6%  val_acc=95.3%
+   Client  3: val_f1=85.9%  val_acc=93.8%
+   Client  4: val_f1=84.9%  val_acc=95.6%
+   Client  5: val_f1=77.2%  val_acc=92.5%
+   Client  7: val_f1=82.4%  val_acc=96.8%
+   Client  8: val_f1=83.0%  val_acc=93.2%
+   Client  9: val_f1=83.0%  val_acc=95.3%
+   Client 10: val_f1=90.2%  val_acc=97.5%
+
+[Round  64 | ensemble] Acc=95.46%  F1-macro=85.49%
+    Adware              : F1=99.4%  P=99.4%  R=99.3%
+    Backdoor            : F1=78.5%  P=72.7%  R=85.3%
+    FileInfector        : F1=70.4%  P=63.3%  R=79.2%
+    PUA                 : F1=80.2%  P=84.8%  R=76.0%
+    Ransomware          : F1=93.2%  P=91.3%  R=95.2%
+    Riskware            : F1=98.0%  P=98.5%  R=97.6%
+    Scareware           : F1=94.9%  P=92.2%  R=97.6%
+    Trojan              : F1=98.2%  P=99.0%  R=97.4%
+    Trojan_Banker       : F1=42.4%  P=34.1%  R=56.0%
+    Trojan_Dropper      : F1=89.6%  P=88.7%  R=90.5%
+    Trojan_SMS          : F1=88.9%  P=95.0%  R=83.5%
+    Trojan_Spy          : F1=92.3%  P=92.3%  R=92.3%
+ Round time: 47.4s
+   [Random] Selected: clients [1, 2, 3, 4, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  65/70  [ENSEMBLE]
+   Client  1: val_f1=78.0%  val_acc=96.3%
+   Client  2: val_f1=80.2%  val_acc=93.8%
+   Client  3: val_f1=84.5%  val_acc=93.4%
+   Client  4: val_f1=87.7%  val_acc=96.1%
+   Client  6: val_f1=87.2%  val_acc=95.8%
+   Client  7: val_f1=76.9%  val_acc=96.8%
+   Client  9: val_f1=87.5%  val_acc=97.2%
+   Client 10: val_f1=92.2%  val_acc=97.8%
+
+[Round  65 | ensemble] Acc=95.46%  F1-macro=85.51%
+    Adware              : F1=99.4%  P=99.9%  R=98.9%
+    Backdoor            : F1=77.8%  P=71.5%  R=85.3%
+    FileInfector        : F1=64.3%  P=56.2%  R=75.0%
+    PUA                 : F1=79.8%  P=80.5%  R=79.2%
+    Ransomware          : F1=93.7%  P=93.6%  R=93.9%
+    Riskware            : F1=97.7%  P=98.6%  R=96.7%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=98.4%  P=98.6%  R=98.1%
+    Trojan_Banker       : F1=46.7%  P=40.0%  R=56.0%
+    Trojan_Dropper      : F1=89.9%  P=88.7%  R=91.2%
+    Trojan_SMS          : F1=90.9%  P=94.6%  R=87.4%
+    Trojan_Spy          : F1=91.5%  P=89.4%  R=93.8%
+ Round time: 51.7s
+   [Random] Selected: clients [2, 3, 4, 5, 6, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  66/70  [ENSEMBLE]
+   Client  2: val_f1=82.6%  val_acc=94.1%
+   Client  3: val_f1=86.4%  val_acc=94.2%
+   Client  4: val_f1=86.8%  val_acc=95.9%
+   Client  5: val_f1=80.4%  val_acc=93.1%
+   Client  6: val_f1=82.6%  val_acc=93.8%
+   Client  8: val_f1=91.1%  val_acc=97.3%
+   Client  9: val_f1=84.0%  val_acc=96.3%
+   Client 10: val_f1=88.2%  val_acc=97.3%
+
+[Round  66 | ensemble] Acc=94.83%  F1-macro=84.57%
+    Adware              : F1=99.3%  P=99.3%  R=99.2%
+    Backdoor            : F1=73.1%  P=65.0%  R=83.5%
+    FileInfector        : F1=67.9%  P=59.4%  R=79.2%
+    PUA                 : F1=79.2%  P=79.2%  R=79.2%
+    Ransomware          : F1=94.1%  P=93.3%  R=94.8%
+    Riskware            : F1=97.0%  P=98.4%  R=95.7%
+    Scareware           : F1=95.4%  P=93.3%  R=97.6%
+    Trojan              : F1=98.0%  P=99.2%  R=96.8%
+    Trojan_Banker       : F1=41.2%  P=32.6%  R=56.0%
+    Trojan_Dropper      : F1=89.9%  P=89.3%  R=90.5%
+    Trojan_SMS          : F1=89.6%  P=94.5%  R=85.2%
+    Trojan_Spy          : F1=90.4%  P=88.5%  R=92.3%
+ Round time: 43.0s
+   [Random] Selected: clients [1, 2, 3, 5, 6, 7, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  67/70  [ENSEMBLE]
+   Client  1: val_f1=82.3%  val_acc=96.6%
+   Client  2: val_f1=83.2%  val_acc=94.7%
+   Client  3: val_f1=86.7%  val_acc=94.2%
+   Client  5: val_f1=75.4%  val_acc=92.5%
+   Client  6: val_f1=84.5%  val_acc=95.3%
+   Client  7: val_f1=80.3%  val_acc=97.0%
+   Client  9: val_f1=85.1%  val_acc=96.3%
+   Client 10: val_f1=91.3%  val_acc=98.0%
+
+[Round  67 | ensemble] Acc=95.37%  F1-macro=85.68%
+    Adware              : F1=99.2%  P=99.4%  R=99.0%
+    Backdoor            : F1=80.2%  P=75.6%  R=85.3%
+    FileInfector        : F1=66.7%  P=60.0%  R=75.0%
+    PUA                 : F1=79.8%  P=80.5%  R=79.2%
+    Ransomware          : F1=93.4%  P=95.3%  R=91.6%
+    Riskware            : F1=97.8%  P=98.7%  R=96.9%
+    Scareware           : F1=96.0%  P=93.3%  R=98.8%
+    Trojan              : F1=98.1%  P=98.5%  R=97.6%
+    Trojan_Banker       : F1=47.5%  P=41.2%  R=56.0%
+    Trojan_Dropper      : F1=87.6%  P=84.3%  R=91.2%
+    Trojan_SMS          : F1=91.2%  P=94.2%  R=88.5%
+    Trojan_Spy          : F1=90.7%  P=87.8%  R=93.8%
+ Round time: 44.2s
+   [Random] Selected: clients [1, 2, 3, 4, 5, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  68/70  [ENSEMBLE]
+   Client  1: val_f1=78.4%  val_acc=94.4%
+   Client  2: val_f1=74.4%  val_acc=93.5%
+   Client  3: val_f1=80.9%  val_acc=92.9%
+   Client  4: val_f1=79.6%  val_acc=95.9%
+   Client  5: val_f1=85.2%  val_acc=94.8%
+   Client  8: val_f1=85.0%  val_acc=96.2%
+   Client  9: val_f1=83.6%  val_acc=96.3%
+   Client 10: val_f1=92.1%  val_acc=98.0%
+
+[Round  68 | ensemble] Acc=95.60%  F1-macro=86.38%
+    Adware              : F1=99.5%  P=99.9%  R=99.0%
+    Backdoor            : F1=78.6%  P=73.6%  R=84.4%
+    FileInfector        : F1=69.0%  P=58.8%  R=83.3%
+    PUA                 : F1=81.5%  P=82.1%  R=80.8%
+    Ransomware          : F1=94.3%  P=93.1%  R=95.5%
+    Riskware            : F1=97.5%  P=98.5%  R=96.5%
+    Scareware           : F1=96.0%  P=94.3%  R=97.6%
+    Trojan              : F1=98.3%  P=98.6%  R=97.9%
+    Trojan_Banker       : F1=49.1%  P=43.8%  R=56.0%
+    Trojan_Dropper      : F1=89.3%  P=90.3%  R=88.4%
+    Trojan_SMS          : F1=92.9%  P=95.9%  R=90.1%
+    Trojan_Spy          : F1=90.7%  P=87.8%  R=93.8%
+ Round time: 41.3s
+   [Random] Selected: clients [2, 3, 5, 6, 7, 8, 9, 10]
+────────────────────────────────────────────────────────────
+ Round  69/70  [ENSEMBLE]
+   Client  2: val_f1=80.2%  val_acc=93.8%
+   Client  3: val_f1=84.9%  val_acc=93.8%
+   Client  5: val_f1=75.6%  val_acc=92.5%
+   Client  6: val_f1=82.5%  val_acc=94.3%
+   Client  7: val_f1=76.9%  val_acc=96.8%
+   Client  8: val_f1=86.1%  val_acc=95.9%
+   Client  9: val_f1=83.2%  val_acc=96.0%
+   Client 10: val_f1=86.4%  val_acc=95.5%
+
+[Round  69 | ensemble] Acc=94.96%  F1-macro=84.61%
+    Adware              : F1=99.3%  P=99.9%  R=98.7%
+    Backdoor            : F1=74.7%  P=66.4%  R=85.3%
+    FileInfector        : F1=66.7%  P=57.6%  R=79.2%
+    PUA                 : F1=77.3%  P=75.6%  R=79.2%
+    Ransomware          : F1=93.6%  P=93.0%  R=94.2%
+    Riskware            : F1=97.3%  P=98.4%  R=96.2%
+    Scareware           : F1=94.9%  P=91.3%  R=98.8%
+    Trojan              : F1=98.2%  P=99.1%  R=97.3%
+    Trojan_Banker       : F1=42.4%  P=34.1%  R=56.0%
+    Trojan_Dropper      : F1=90.1%  P=90.4%  R=89.8%
+    Trojan_SMS          : F1=89.3%  P=93.9%  R=85.2%
+    Trojan_Spy          : F1=91.4%  P=91.0%  R=91.8%
+ Round time: 44.7s
+   [Random] Selected: clients [1, 2, 3, 4, 6, 7, 8, 9]
+────────────────────────────────────────────────────────────
+ Round  70/70  [ENSEMBLE]
+   Client  1: val_f1=78.7%  val_acc=95.0%
+   Client  2: val_f1=83.4%  val_acc=94.1%
+   Client  3: val_f1=90.7%  val_acc=94.2%
+   Client  4: val_f1=85.2%  val_acc=94.9%
+   Client  6: val_f1=86.1%  val_acc=95.0%
+   Client  7: val_f1=80.8%  val_acc=97.6%
+   Client  8: val_f1=90.9%  val_acc=95.9%
+   Client  9: val_f1=80.8%  val_acc=94.4%
+
+[Round  70 | ensemble] Acc=95.53%  F1-macro=86.07%
+    Adware              : F1=99.5%  P=99.9%  R=99.1%
+    Backdoor            : F1=77.0%  P=70.8%  R=84.4%
+    FileInfector        : F1=71.7%  P=65.5%  R=79.2%
+    PUA                 : F1=82.0%  P=84.0%  R=80.0%
+    Ransomware          : F1=94.2%  P=93.4%  R=95.2%
+    Riskware            : F1=97.7%  P=98.9%  R=96.6%
+    Scareware           : F1=95.5%  P=92.3%  R=98.8%
+    Trojan              : F1=98.3%  P=98.5%  R=98.0%
+    Trojan_Banker       : F1=46.7%  P=40.0%  R=56.0%
+    Trojan_Dropper      : F1=88.7%  P=86.5%  R=91.2%
+    Trojan_SMS          : F1=90.2%  P=94.6%  R=86.3%
+    Trojan_Spy          : F1=91.3%  P=89.4%  R=93.3%
+ Round time: 43.8s
+Convergence plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa\no_aoa_convergence.png
+Confusion matrix saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa\no_aoa_cm_round70.png
+Per-class metrics plot saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa\no_aoa_perclass_round70.png
+
+============================================================
+ Training complete in 131.0 minutes
+ Best F1-macro: 87.45%
+ Results saved: C:\Users\Dspike\Documents\FL-AdroidMaLD\results\baselines\no_aoa
+============================================================
+
